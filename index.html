@@ -4,15 +4,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Chatbot</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+
+<!-- Der Abruf von Google-Fonts darf nur im Kontext "Clara free" aktiviert sein! -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&amp;display=swap" rel="stylesheet" />
 
 
-
 <style>
 
-/* ########################creamco######################## 
+/* ########################creamco
 
 :root {
 
@@ -32,38 +33,37 @@
   --website-standard-font-color-dark: #000;
   --primary-company-border-radius: 8px;
   --company-font-family: 'Quicksand', sans-serif;
-  --company-font-weight: 300;
+  --company-font-weight: 400;
   --company-font-size-title: 27px;
   --company-font-size-subtitle: 18px;
   --company-font-size-text: 18px;
-  --company-font-size-finePrint: 18px;
+  --company-font-size-fineprint: 18px;
   --company-font-size-button: 18px;
   --form-and-field-company-color: #ddd;
   --primary-background-company-color: #fff;
   --modal-background: rgba(0, 0, 0, 0.5);
   --clara-image-url: url("https://www.cream-collection.de/wp-content/uploads/go-x/u/8b4f2525-c964-461b-a6a9-daa9ef61f180/l0,t0,w482,h410/image-240x204.jpg");
+########################*/
 
-######################## */
-
-/* ########################Mäcces######################## */
+/* ########################customer########################*/
 
 :root {
 
-  --rules-customer: McDonalds; 
-  --company-main-url: "https://www.mcdonalds.com/de/de-de.html";
-  --company-logo-url: url("https://www.mcdonalds.com/content/dam/sites/de/unsubscribe/McDonalds-Logo.png");
+  --rules-customer: Königs Inkasso; 
+  --company-main-url: "https://koenigs-inkasso.de";
+  --company-logo-url: url("https://koenigs-inkasso.de/wp-content/uploads/sites/5/2018/07/logo-kg-inkasso-small.svg");
   --company-logo-background: var(--secondary-background-color);
-  --company-name: "McDonald’s Deutschland LLC";
-  --company-street: "Drygalski-Allee 51";
-  --company-city: "81477 München";
-  --company-email: "stephan.vila@cream-collection.de";
-  --primary-company-color: #F2120E;
-  --secondary-company-color: #F8B214;
-  --tertiary-company-color: #68B438;
-  --tertiary-company-color-light: #F8F8F8;
-  --website-standard-font-color-light: #F8F8F8;
+  --company-name: "Königs Inkasso GmbH";
+  --company-street: "Mühlenstr. 49";
+  --company-city: "47918 Tönisvorst";
+  --company-email: "post24@koenigs-inkasso.de";
+  --primary-company-color: #FF4438  ;
+  --secondary-company-color: #909090;
+  --tertiary-company-color: #DEDFE3;
+  --tertiary-company-color-light: #FDFDFD;
+  --website-standard-font-color-light: #FDFDFD;
   --website-standard-font-color-dark: #000;
-  --primary-company-border-radius: 8px;
+  --primary-company-border-radius: 0px;
   --company-font-family: 'Quicksand', sans-serif;
   --company-font-weight: 300;
   --company-font-size-title: 27px;
@@ -71,19 +71,551 @@
   --company-font-size-text: 18px;
   --company-font-size-finePrint: 18px;
   --company-font-size-button: 18px;
-  --form-and-field-company-color: #68B438;
-  --primary-background-company-color: #F8F8F8;
+  --form-and-field-company-color: #DEDFE3;
+  --primary-background-company-color: #ECECEC;
   --modal-background: rgba(0, 0, 0, 0.5);
-  --clara-image-url: url("https://ih1.redbubble.net/image.4913624401.0067/st,small,507x507-pad,600x600,f8f8f8.jpg");
+  --clara-image-url: url("https://rosendo99er.github.io/images/1362977D-EA04-4EE8-950B-C99CBEEBF9DF.JPEG");
 
 
 
+  --primary-link-color: var(--primary-company-color);
+  --secondary-link-color: var(--secondary-company-color);
 
+
+  --body-background-color: var(--primary-background-company-Color);
+
+  --primary-border-color:   var(--form-and-field-company-color);
+  --secondary-border-color: var(--primary-company-color);
+  --tertiary-border-color:  var(--tertiary-company-color);
+
+
+  --primary-font-color: var(--primary-company-color);
+  --secondary-font-color: var(--secondary-company-color);
+  --tertiary-font-color:  var(--website-standard-font-color-light);
+  --tertiary-font-color-dark: var(--website-standard-font-color-dark);
+ 
+
+  --primary-button-color: var(--primary-company-color);
+  --secondary-button-color: var(--secondary-company-color);
+
+  --primary-loader-color: var(--tertiary-company-color-light);
+  --secondary-loader-color: var(--primary-company-color);
+
+  --primary-background-color: var(--primary-background-company-color);
+  --secondary-background-color: var(--tertiary-company-color-light);
+  --special-background-color: var(--primary-company-color);
+
+  --primary-border-radius: var(--primary-company-border-radius);
+
+  --font-size-title: var(--company-font-size-title);
+  --font-size-subtitle: var(--company-font-size-subtitle);
+  --font-size-text: var(--company-font-size-text);
+  --font-size-fineprint: var(--company-font-size-fineprint);
+  --font-size-button: var(--company-font-size-button);
+
+  --media-font-size-title: 21px;
+  --media-font-size-subtitle: 18px;
+  --media-font-size-text: 16px;
+  --media-font-size-fineprint: 12px;
+  --media-font-size-button: 16px;
+
+}
 
 
 /* ++++++++++++++++++++++++ Anwendung Clara free ++++++++++++++++++++++++ */
 
+:root {
 --rules-context: ChatbotIntern; 
+}
+
+html, body {
+  font-family: var(--company-font-family);
+  background-color: var(--primary-background-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  }
+
+
+#logo-header {
+    width: 100%;
+    height: 10vh;
+    min-height: 120px;
+    background-color: var(--company-logo-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+#footer {
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-company-color);
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    bottom: 0;
+    }
+
+
+#company-logo {
+    background-image: var(--company-logo-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px; 
+    height: 100px;
+    
+}
+
+
+
+#section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-background-color);
+    border: 0px solid var(--secondary-border-color);
+    border-radius: var(--primary-border-radius);
+    overflow: hidden; 
+    box-sizing: border-box; 
+    width: 100%;
+    height: 80vh;
+    min-height: 815px;
+    z-index: 1;    
+  }
+
+#toggle-container {
+    display: block;
+    width: 1000px;
+    height: 60vh;
+    min-height: 790px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--primary-background-color);
+    border: 0px solid var(--primary-border-color);
+    border-radius: var(--primary-border-radius);
+    overflow: hidden; 
+    box-sizing: border-box; 
+    padding: 5px;
+    z-index: 2;
+  }
+
+
+#title-container {
+  display: flex;
+}
+
+.title-content .custom0c-p {
+  display: none;
+}
+
+#clara-image {
+  display: block;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+
+  html, body {
+    font-family: var(--company-font-family);
+    background-color: var(--primary-background-color);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #logo-header {
+    width: 100%;
+    height: 10vh;
+    min-height: 60px !important;
+    background-color: var(--company-logo-background);
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    padding: 0px !important;
+    box-sizing: border-box;
+    margin-bottom: 0px;
+}
+
+
+  #footer {
+    height: 10vh;
+    min-height: 60px;
+    }
+
+
+  #company-logo {
+    background-image: var(--company-logo-url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 200px; 
+    height: 80px;
+  }
+
+  #section-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--primary-background-color);
+    border: 0px solid var(--secondary-border-color);
+    border-radius: 0 !important;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    width: 100%;
+    height: 80vh !important;
+    min-height: 80vh !important;
+    z-index: 1;    
+  }
+
+  #toggle-container {
+    display: block;
+    width: 100%;
+    height: 80vh !important;
+    min-height: 80vh !important;
+    max-width: none;
+    max-height: 80% !important;
+    background-color: var(--primary-background-color);
+    border: 0px solid var(--primary-border-color) !important;
+    border-radius: 0 !important;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    padding: 0px;
+    z-index: 2;
+  }
+
+
+  #chatbot-container {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 63vh !important;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    padding: 0px 2px 0px 2px;
+    border: 0px solid var(--tertiary-border-color);
+  }
+
+
+
+#chatbot {
+  width: 100%;
+  height: 63vh !important;
+  min-height: 63vh !important;
+  max-height: 63vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 2; 
+}
+
+
+
+#title-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0px 5px 0px !important; 
+  margin-top: 0px !important;
+  background-color: var(--primary-company-color) !important;
+}
+
+
+
+
+#title-container .title-content {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.title-content .custom0c-p {
+  display: block;
+  font-family: var(--company-font-family);
+  font-weight: 400 !important;
+  color: var(--tertiary-font-color) !important;
+  font-size: var(--media-font-size-title) !important;
+  margin: 0 !important;
+  text-align: center;
+  justify-content: center;  
+}
+
+    
+.title-content .custom0a-p {
+  display: none;
+}
+
+.title-content .custom0b-p {
+  display: none;
+}
+
+#clara-image {
+  display: none;
+}
+
+
+#chatbot-header {
+
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 10px !important;
+  border-bottom: 1px solid #ddd;
+}
+
+
+
+#chatbot-input-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 10px !important;
+  box-sizing: border-box;
+  background-color: var(--secondary-background-color);
+  border-radius: 0px 0px var(--primary-border-radius) var(--primary-border-radius);
+  margin-top: 10px;
+  min-height: 60px !important;
+  z-index: 2;
+}
+
+
+
+#chatbot-input {
+  display: block !important;
+  font-family: var(--company-font-family) !important;
+  font-size: var(--media-font-size-text) !important;
+  color: var(--primary-font-color) !important;
+  font-weight: normal !important;
+  padding: 5px 10px 5px 10px !important;
+  border: 1px solid var(--primary-border-color) !important;
+  border-radius: var(--primary-border-radius) !important;
+  margin: 0px !important;
+  width: 100% !important;
+  height: 45px !important;
+  min-height: 45px !important;
+  max-height: 122px !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+  resize: vertical !important;
+}
+
+#chatbot-input:focus {
+  border-color: var(--secondary-border-color) !important;
+  outline: none !important;
+}
+
+
+
+#chatbot-input::placeholder {
+  color: var(--secondary-font-color);
+  font-family: var(--company-font-family);
+  font-size: var(--media-font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
+}
+
+
+}
+
+
+
+#contact-form-title-container {
+  display: none;
+}
+
+
+#contact-form-container {
+  display: none;
+}
+
+#input-button-container {
+  display: none;
+}
+
+
+#back-to-outlook-container {
+  display: none;
+}
+
+
+#instant-answer-dialog-button-container {
+  display: none;
+}
+
+.icon4 {
+    display: none;
+}
+
+#loader-container {
+  top: 60%;
+}
+
+
+
+ /* ++++++++++++++++++++++++ ENDE Anwendung Clara free ++++++++++++++++++++++++ */
+
+
+
+
+
+
+/* ++++++++++++++++++++++++ Anwendung Clara ++++++++++++++++++++++++ 
+
+:root {
+--rules-context: ChatbotConsumer; 
+}
+
+#logo-header {
+    display: none;
+}
+
+#footer {
+    display: none;
+}
+
+#title-container {
+  display: flex;
+}
+
+.title-content .custom0c-p {
+  display: none;
+}
+
+#clara-image {
+  display: block;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    #title-container {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+
+    }
+
+    .title-content {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .title-content .custom0a-p {
+        margin-left: 0px;
+
+    }
+
+    .title-content .custom0b-p {
+        display: none;
+
+    }
+
+    .title-content .custom0c-p {
+        color: var(--primary-font-color);
+        font-size: var(--media-font-size-subtitle);
+        hyphens: auto;
+        word-wrap: break-word;  
+        margin-left: 0px;
+     }
+
+    #clara-image {
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+}
+
+
+#contact-form-title-container {
+  display: none;
+}
+
+
+#contact-form-container {
+  display: none;
+}
+
+#input-button-container {
+  display: none;
+}
+
+
+#back-to-outlook-container {
+  display: none;
+}
+
+
+#chatbot-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+#instant-answer-dialog-button-container {
+  display: none;
+}
+
+.icon4 {
+    display: none;
+}
+
+#loader-container {
+  top: 60%;
+}
+
+
+  ++++++++++++++++++++++++ ENDE Anwendung Clara ++++++++++++++++++++++++ */
+
+
+
+
+/* ++++++++++++++++++++++++ Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
+
+:root {
+--rules-context: ChatbotContact; 
+}
 
 
 html, body {
@@ -92,32 +624,36 @@ html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-}
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  }
 
 
 #logo-header {
     width: 100%;
-    height: 150px;
+    height: 10vh;
+    min-height: 120px;
     background-color: var(--company-logo-background);
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    justify-content: center;
+    padding-left: 0px;
     box-sizing: border-box;
+    margin-bottom: 0px;
 }
 
-#separate-header {
+#footer {
     width: 100%;
-    height: 150px;
+    height: 10vh;
     background-color: var(--primary-company-color);
     display: flex;
     align-items: center;
-    position: fixed;
+    margin-top: 0px;
     bottom: 0;
-    left: 0;
-    z-index: 1000;So, erste FRra
-}
+    }
 
 
 #company-logo {
@@ -125,278 +661,341 @@ html, body {
     background-size: contain;
     background-repeat: no-repeat;
     width: 200px; 
-    height: 80px;
+    height: 60px;
+    
 }
 
 
 
-#toggle-container {
-    width: 1000px;
-    height: 800px;
-    min-width: 1000px;
-    min-height: 800px;
-    max-width: 1000px;
-    max-height: 800px;
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
+#section-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     background-color: var(--primary-background-color);
     border: 2px solid var(--secondary-border-color);
     border-radius: var(--primary-border-radius);
-    cursor: move; 
     overflow: hidden; 
     box-sizing: border-box; 
-    padding: 10px; 
-    margin: 0; 
-    z-index: 100000;
-    flex-direction: column;
-    align-items: stretch;
-}
+    width: 100%;
+    height: 80vh;
+    min-height: 815px;
+    z-index: 1;    
+  }
 
-
+#toggle-container {
+    display: block;
+    width: 1000px;
+    height: 60vh;
+    min-height: 790px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--primary-background-color);
+    border: 2px solid var(--primary-border-color);
+    border-radius: 0;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    padding: 0px;
+    z-index: 2;
+  }
 
 
 #title-container {
-  display: flex;
-}
-
-.title-content .custom0c-p {
   display: none;
 }
 
-
-@media screen and (max-width: 576px) {
-
-    #title-container {
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .title-content {
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .title-content .custom0a-p {
-        margin-left: 0px;
-
-    }
-
-    .title-content .custom0b-p {
-        display: none;
-
-    }
-
-    .title-content .custom0c-p {
-        color: var(--primary-font-color);
-        font-size: var(--media-font-size-subtitle);
-        hyphens: auto;
-        word-wrap: break-word;  
-        margin-left: 0px;
-     }
-
+#contact-form-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0px 5px 0px; 
+  margin-bottom: 20px;
+  background-color: var(--primary-company-color);
 }
+
+
+
+
+#contact-form-title-container .contact-form-title-content {
+    position: relative;
+    width: 1000px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+    border: 0px solid #fff;
+    border-radius: 0;
+}
+
+
+.contact-form-title-content .contact-form-custom0c-p {
+  display: block;
+  font-family: var(--company-font-family);
+  font-weight: 400;
+  color: var(--tertiary-font-color);
+  font-size: var(--font-size-title);
+  margin: 0;
+  text-align: left;
+  justify-content: center;  
+  padding-left: 20px;
+}
+
 
 
 
 #clara-image {
-  display: block;
+  display: none;
 }
 
 
-@media screen and (max-width: 576px) {
-    #clara-image {
-        display: none;
-        width: 0 !important;
-        height: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
+
+
+#contact-form-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-background-color);
+  border: 0px solid var(--secondary-border-color);
+  border-radius: 0;
+  overflow: hidden; 
+  box-sizing: border-box; 
+  width: 100%;
+  z-index: 1;
 }
+
 
 
 #contact-form-container {
-  display: none;
-}
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid var(--secondary-border-color);
+  border-radius: 0;
+  padding: 0px 9px 0px 8px;
+  position: relative;
+  }
 
-#input-button-container {
-  display: none;
-}
 
 
-#back-to-outlook-container {
-  display: none;
-}
 
-
-#chatbot-container {
-  display: flex;
+#contact-form-aktennummer {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  margin-bottom: 10px;
   margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 42px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
 
-#instant-answer-dialog-button-container {
-  display: none;
-}
-
-.icon4 {
-    display: none;
-}
-
-#loader-container {
-  top: 60%;
+#contact-form-aktennummer,
+#contact-form-aktennummer:focus,
+#contact-form-aktennummer:valid {
+    background-color: var(--primary-background-color);
 }
 
 
-
-/* ++++++++++++++++++++++++ ENDE Anwendung Clara free ++++++++++++++++++++++++ */
-
-
-
-
-
-
-/* ++++++++++++++++++++++++ Anwendung Clara ++++++++++++++++++++++++
-
---rules-context: ChatbotConsumer; 
-
-
-#logo-header {
-    display: none;
-}
-
-#separate-header {
-    display: none;
+#contact-form-aktennummer::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
 }
 
 
 
-#title-container {
-  display: flex;
-}
 
-.title-content .custom0c-p {
-  display: none;
-}
-
-
-@media screen and (max-width: 576px) {
-
-    #title-container {
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-
-    }
-
-    .title-content {
-        width: 100%;
-        padding: 0px;
-        margin: 0px;
-    }
-
-    .title-content .custom0a-p {
-        margin-left: 0px;
-
-    }
-
-    .title-content .custom0b-p {
-        display: none;
-
-    }
-
-    .title-content .custom0c-p {
-        color: var(--primary-font-color);
-        font-size: var(--media-font-size-subtitle);
-        hyphens: auto;
-        word-wrap: break-word;  
-        margin-left: 0px;
-     }
-
-}
-
-
-
-#clara-image {
-  display: block;
-}
-
-
-@media screen and (max-width: 576px) {
-    #clara-image {
-        display: none;
-        width: 0 !important;
-        height: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-}
-
-
-#contact-form-container {
-  display: none;
-}
-
-#input-button-container {
-  display: none;
-}
-
-
-#back-to-outlook-container {
-  display: none;
-}
-
-
-#chatbot-container {
-  display: flex;
+#contact-form-name {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  margin-bottom: 10px;
   margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 42px; 
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
 
-#instant-answer-dialog-button-container {
-  display: none;
-}
-
-.icon4 {
-    display: none;
-}
-
-#loader-container {
-  top: 60%;
-}
-
-
- ++++++++++++++++++++++++ ENDE Anwendung Clara ++++++++++++++++++++++++ */
-
-
-
-
-/* ++++++++++++++++++++++++ Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
-
---rules-context: ChatbotContact; 
-
-#logo-header {
-    display: none;
-}
-
-#separate-header {
-    display: none;
+#contact-form-name,
+#contact-form-name:focus,
+#contact-form-name:valid {
+    background-color: var(--primary-background-color);
 }
 
 
-#title-container {
-  display: none;
+
+#contact-form-name::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
 }
 
-#clara-image {
-  display: none;
+
+
+
+#contact-form-email {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 42px; 
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
 }
+
+
+#contact-form-email::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
+}
+
+
+
+
+#contact-form-nachricht {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  overflow: auto;
+  white-space: normal;
+  max-height: calc(1.5em * 6 + 20px);
+}
+
+
+
+
+#modalMessage {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none; 
+  box-sizing: border-box;
+  overflow: auto;
+  white-space: normal;
+  max-height: calc(1.5em * 6 + 20px);
+}
+
+
+
+
+
+#contact-form-nachricht,
+#contact-form-nachricht:focus,
+#contact-form-nachricht:valid {
+    background-color: var(--primary-background-color);
+}
+
+#modalMessage,
+#modalMessage:focus,
+#modalMessage:valid {
+    background-color: var(--primary-background-color);
+}
+
+
+
+
+
+
+
+
+#contact-form-nachricht::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
+}
+
+
+
+#modalMessage::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  padding-left: 0px;
+}
+
+
+
+
+
+
+
+
 
 #contact-form-container {
   display: block;
@@ -426,20 +1025,368 @@ html, body {
 }
 
 
- ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ */
+
+@media screen and (max-width: 600px) {
+
+
+html, body {
+  font-family: var(--company-font-family);
+  background-color: var(--primary-background-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#logo-header {
+  width: 100%;
+  height: 10vh;
+  min-height: 60px !important;
+  background-color: var(--company-logo-background);
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  padding: 0px !important;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+
+#footer {
+  height: 10vh;
+  min-height: 60px;
+  }
+
+
+#company-logo {
+  background-image: var(--company-logo-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 200px; 
+  height: 40px;
+}
+
+
+#contact-form-title-container {
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  padding: 5px 0px 5px 0px !important; 
+  margin-top: 0px !important;
+  background-color: var(--primary-company-color) !important;
+}
+
+
+
+
+#contact-form-title-container .contact-form-title-content {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.contact-form-title-content .contact-form-custom0c-p {
+  display: block;
+  font-family: var(--company-font-family);
+  font-weight: 400 !important;
+  color: var(--tertiary-font-color) !important;
+  font-size: var(--media-font-size-title) !important;
+  margin: 0 !important;
+  text-align: center;
+  justify-content: center;  
+}
+
+
+#contact-form-aktennummer {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 35px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
+#contact-form-name {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 35px; 
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+#contact-form-email {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  height: 35px; 
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+
+
+
+
+#contact-form-nachricht {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  flex: 1;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  overflow: auto;
+  white-space: normal;
+  max-height: calc(1.2em * 4 + 20px) !important;
+}
+
+
+
+#section-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--primary-background-color);
+  border: 0px solid var(--secondary-border-color);
+  border-radius: 0 !important;
+  overflow: hidden; 
+  box-sizing: border-box; 
+  width: 100%;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  z-index: 1;    
+}
+
+#toggle-container {
+  display: block;
+  width: 100%;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  max-width: none;
+  max-height: 100% !important;
+  background-color: var(--primary-background-color);
+  border: 0px solid var(--primary-border-color) !important;
+  border-radius: 0 !important;
+  overflow: hidden; 
+  box-sizing: border-box; 
+  padding: 0px;
+  z-index: 2;
+}
+
+
+#chatbot-container {
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90vh !important;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  padding: 0px;
+  border: 0px solid var(--primary-border-color) !important;
+}
+
+
+
+#chatbot {
+  width: 100%;
+  height: 63vh !important;
+  min-height: 63vh !important;
+  max-height: 63vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  border: 1px solid var(--primary-border-color) !important;
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 2; 
+}
+
+
+#chatbot-header {
+
+display: flex; 
+align-items: center; 
+width: 100%; 
+box-sizing: border-box; 
+padding: 10px !important;
+border-bottom: 1px solid #ddd;
+}
+
+
+
+#chatbot-input-container {
+display: flex;
+flex-direction: column;
+height: auto;
+width: 100%;
+padding: 10px !important;
+box-sizing: border-box;
+background-color: var(--secondary-background-color);
+border-radius: 0px 0px var(--primary-border-radius) var(--primary-border-radius);
+margin-top: 10px;
+min-height: 60px !important;
+z-index: 2;
+}
+
+
+
+#chatbot-input {
+display: block !important;
+font-family: var(--company-font-family) !important;
+font-size: var(--media-font-size-text) !important;
+color: var(--primary-font-color) !important;
+font-weight: normal !important;
+padding: 5px 10px 5px 10px !important;
+border: 1px solid var(--primary-border-color) !important;
+border-radius: var(--primary-border-radius) !important;
+margin: 0px !important;
+width: 100% !important;
+height: 45px !important;
+min-height: 45px !important;
+max-height: 122px !important;
+overflow-y: auto !important;
+box-sizing: border-box !important;
+resize: vertical !important;
+}
+
+#chatbot-input:focus {
+border-color: var(--secondary-border-color) !important;
+outline: none !important;
+}
+
+
+
+#chatbot-input::placeholder {
+color: var(--secondary-font-color);
+font-family: var(--company-font-family);
+font-size: var(--media-font-size-text);
+font-style: italic;
+font-weight: normal;
+padding-left: 0px;
+}
+
+
+
+#contact-form-container {
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 0px solid var(--secondary-border-color);
+  border-radius: 0;
+  padding: 0px 9px 0px 8px;
+  position: relative;
+  }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ */
 
 
 
 /* ++++++++++++++++++++++++ Anwendung Chatbot mit Outlook ++++++++++++++++++++++++ 
 
+:root {
 --rules-context: ChatbotOutlook; 
-
+}
 
 #logo-header {
     display: none;
 }
 
-#separate-header {
+#footer {
     display: none;
 }
 
@@ -451,6 +1398,14 @@ html, body {
 #clara-image {
   display: none;
 }
+
+
+
+#contact-form-title-container {
+  display: none;
+}
+
+
 
 
 #contact-form-container {
@@ -502,99 +1457,40 @@ html, body {
 
 
 
-  --primary-link-color: var(--primary-company-color);
-  --secondary-link-color: var(--secondary-company-color);
-
-
-  --body-background-color: var(--primary-background-company-Color);
-
-  --primary-border-color:   var(--form-and-field-company-color);
-  --secondary-border-color: var(--primary-company-color);
-  --tertiary-border-color:  var(--tertiary-company-color);
-
-
-  --primary-font-color: var(--primary-company-color);
-  --secondary-font-color: var(--secondary-company-color);
-  --tertiary-font-color:  var(--website-standard-font-color-light);
-  --tertiary-font-color-dark: var(--website-standard-font-color-dark);
  
-
-  --primary-button-color: var(--primary-company-color);
-  --secondary-button-color: var(--secondary-company-color);
-
-  --primary-loader-color: var(--tertiary-company-color-light);
-  --secondary-loader-color: var(--primary-company-color);
-
-  --primary-background-color: var(--primary-background-company-color);
-  --secondary-background-color: var(--tertiary-company-color-light);
-  --special-background-color: var(--primary-company-color);
-
-  --primary-border-radius: var(--primary-company-border-radius);
-
-  --font-size-title: var(--company-font-size-title);
-  --font-size-subtitle: var(--company-font-size-subtitle);
-  --font-size-text: var(--company-font-size-text);
-  --font-size-finePrint: var(--company-font-size-finePrint);
-  --font-size-button: var(--company-font-size-button);
-
-  --media-font-size-title: 18px;
-  --media-font-size-subtitle: 16px;
-  --media-font-size-text: 16px;
-  --media-font-size-finePrint: 14px;
-  --media-font-size-button: 16px;
-
-}
 
 
 /* Für kleine Bildschirme (maximale Breite: 576px) */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 600px) {
 
     :root {
-        --font-size-title: var(--media-font-size-title);
-        --font-size-subtitle: var(--media-font-size-subtitle);
-        --font-size-text: var(--media-font-size-text);
-        --font-size-finePrint: var(--media-fsize-finePrint);
-        --font-size-button: var(--font-size-button);
+        --font-size-title: var(--media-font-size-title) !important;
+        --font-size-subtitle: var(--media-font-size-subtitle) !important;
+        --font-size-text: var(--media-font-size-text) !important;
+        --font-size-fineprint: var(--media-font-size-fineprint) !important;
+        --font-size-button: var(--font-size-button) !important;
     }
 
-    html, body {
-      height: 100vh;
-      width: 100vw;
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
     }
 
-
-    #toggle-container {
-        width: 365px;
-        height: 660px;
-        padding: 0;
-    }
-
-
-    #chatbot-container {
-        width: 100%;
-        height: 100%;
-    }
-
-
-    #chatbot {
-        max-height: 400px;
-    }
-
-
-
-    #chatbot-input {
-        font-size: var(--font-size-text);
-        height: 35px;
-    }
     
-    #input-right {
-        width: 25px;
-        height: 25px;
+  #title-container {
+      flex-shrink: 0; /* Höhe richtet sich nach dem Inhalt, schrumpft nicht */
     }
+
+  #chatbot-consent-container {
+      flex-shrink: 0; /* Höhe richtet sich nach dem Inhalt, schrumpft nicht */
+    }
+ 
+  
+
+
     
-    #chatbot-header {
-        height: 50px;
-    }
+    
     
 
     .modal-standard-inner {
@@ -604,14 +1500,343 @@ html, body {
     }
 
     #chatbot-consent-label {
-      font-size: var(--media-font-size-text);
+      font-size: var(--media-font-size-fineprint) !important;
     }
 
     .special-link-consent {
-      font-size: var(--media-font-size-text);
+      font-size: var(--media-font-size-fineprint) !important;
     }
 
+
+#chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  border-bottom: 0px solid var(--primary-border-color); /* aktuell ausgeblendet */
+  box-sizing: border-box;
+  padding: 20px !important;
 }
+
+
+
+
+#chatbot-messages-gpt div {
+  border-radius: var(--primary-border-radius);
+  font-family: var(--company-font-family);
+  font-size: var(--media-font-size-text) !important;
+  overflow-x: hidden; 
+}
+
+
+
+#chatbot-messages-gpt .user-message {
+  padding: 0px 0px 20px 30px !important;
+  background-color: var(--primary-background-color);
+  color: var(--primary-font-color);
+  font-family: var(--company-font-family);
+  font-size: var(--media-font-size-text) !important;
+  font-weight: bold;
+  text-align: right !important;
+  margin-top: 0px !important;
+}
+
+
+#chatbot-messages-gpt .bot-message {
+  padding: 0px 0px 20px 0px !important; 
+  font-family: var(--company-font-family);
+  background-color: var(--primary-background-color);
+  text-align: left;
+  color: var(--website-standard-font-color-dark);
+  margin-top: 0px !important; 
+  }
+
+
+
+
+.special-link {
+  color: var(--primary-link-color) !important;
+  text-decoration: underline;
+}
+
+
+
+.special-link:visited {
+  color: var(--secondary-link-color) !important;
+}
+
+
+.special-heading {
+  color: var(--primary-company-color);
+  font-family: var(--company-font-family);
+  font-size: var(--media-font-size-text) !important;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+
+.special-heading-in-standard-color {
+  color: var(--website-standard-font-color-dark);
+  font-family: var(--company-font-family);
+  font-size: var(--media-font-size-text) !important;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+
+.send-confirmation {
+  position: fixed;
+  z-index: 9999999 !important;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 80% !important;
+  display: flex; /* Flexbox für Zentrierung */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--modal-background);
+  box-sizing: border-box;
+  pointer-events: auto; /* Interaktionen sind erlaubt */
+}
+
+
+
+/* Stile für den help-modal-dialog (hmd) */
+.hmd-dialog {
+  z-index: 10000000 !important;
+  position: absolute;
+  left: 50%;
+  top: 60% !important;
+  width: 90% !important;
+  height: 80% !important;
+  background-color: var(--primary-background-color);
+  display: flex; /* Flexbox aktivieren */
+  flex-direction: column; /* Inhalt und Buttons vertikal anordnen */
+  justify-content: space-between; /* Zwischen Inhalt und Button Abstand lassen */
+  transform: translate(-50%, -50%); /* Zentriert den Dialog */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Schatten für besseren Effekt */
+  padding: 0px; /* aktuell kein Innenabstand */
+  border: 2px solid var(--primary-border-color);
+  border-radius: var(--primary-border-radius);
+  box-sizing: border-box;
+  pointer-events: auto; /* Interaktionen sind erlaubt */
+}
+
+
+
+.hmd-content {
+    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    overflow-y: auto; /* Vertikales Scrollen erlauben */
+    max-height: calc(100% - 80px); /* Höchstens so hoch wie der Dialog minus Platz für Buttons */
+    width: 100%;
+    max-width: none; /* Breite begrenzen */
+    box-sizing: border-box; /* Berücksichtigt Padding in der Breite */
+    margin-top: 0px !important;
+    margin-bottom: 10px;
+    padding: 0px !important;
+}
+
+.hmd-content .custom-h2 {
+    padding: 20px 20px 0px 20px !important;
+    border-radius: var(--primary-border-radius);
+    text-align: left;
+    font-size: var(--font-size-title) !important;
+    color: var(--primary-font-color);
+}
+
+.hmd-content .custom-h3 {
+    padding: 20px 20px 0px 20px !important;
+    border-radius: var(--primary-border-radius);
+    text-align: left;
+    font-size: var(--font-size-subtitle) !important;
+    font-weight: bold;
+    color: var(--secondary-font-color);
+}
+
+
+
+.hmd-content p {
+    font-size: var(--font-size-text);
+    color: var(--website-standard-font-color-dark);
+    padding: 20px !important;
+    margin: 0px;
+
+
+}
+
+
+.hmd-content-ul {
+    margin-left: 0px !important;
+    padding-right: 10px;
+}
+
+
+
+.hmd-content li {
+    font-size: var(--font-size-text) !important;
+    color: var(--website-standard-font-color-dark);
+    margin-bottom: 10px;
+    line-height: 1.2 !important;
+    list-style-type: disc;
+    padding-left: 0px !important;
+
+}
+
+
+
+.hmd-button-container {
+    display: flex;
+    justify-content: center; /* Zentriert die Buttons im Dialog */
+    gap: 10px; /* Abstand zwischen den Buttons */
+    margin-top: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--tertiary-border-color);
+}
+
+
+
+.hmd-button {
+    font-family: var(--company-font-family);  
+    font-size: var(--font-size-button);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--primary-border-radius);
+    background-color: var(--primary-button-color);
+    color: var(--tertiary-font-color);
+    cursor: pointer;
+    min-width: 150px; /* Verhindert Umbruch und sorgt für gleichmäßige Breite */
+    text-align: center; /* Text zentriert im Button */
+}
+
+.hmd-button:hover {
+    background-color: var(--secondary-button-color);
+}
+
+
+.send-confirmation-dialog {
+    z-index: 10000000 !important;
+    position: absolute;
+    background-color: var(--primary-background-color);
+    left: 50%;
+    top: 50%;
+    width: 90vh !important;
+    max-width: 90% !important;
+    height: auto;
+    max-height: 75vh;
+    transform: translate(-50%, -50%); /* Zentriert den Dialog */
+    pointer-events: auto; /* Interaktionen sind erlaubt */
+    box-sizing: border-box;
+    border: 2px solid var(--primary-border-color);
+    border-radius: var(--primary-border-radius);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Optional: Schatten für besseren Effekt */
+    overflow: hidden; /* Verhindert, dass der Inhalt den Container überschreitet */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}   /* Ende der Media Queries */
+
+
+
+
+    #chatbot-header {
+
+      display: flex; /* Flexbox zur horizontalen Anordnung der Kind-Elemente */
+      align-items: center; /* Zentriert die Inhalte vertikal */
+      width: 100%; /* Nimmt die gesamte Breite des übergeordneten Elements ein */
+      box-sizing: border-box; /* Schließt Padding in die Gesamtbreite ein */
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+
+    #chatbot-language {
+      display: flex;
+      align-items: center; /* Zentriert Flagge und Sprache vertikal */
+      width: 130px;
+      max-width: 40%; /* Nimmt 40 % der Breite von `#chatbot-header` ein */
+      position: relative; /* Ermöglicht absolute Positionierung der Flagge */
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+
+    #selected-flag {
+      margin-right: 5px;/* Fügt einen Abstand zwischen Fahne und Dropdown ein */
+    }
+
+
+
+    /* Dropdown-Styling für #language-dropdown */
+    #language-dropdown {
+      width: 100%; /* Nimmt die volle Breite der jeweiligen Container ein */
+      padding: 5px; /* Optionales Padding für bessere Lesbarkeit */
+      box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
+      font-family: var(--company-font-family);
+      font-size: var(--font-size-text);
+      color: var(--primary-font-color);
+      border: none;
+      background-color: var(--primary-background-color); /* Setzt die Hintergrundfarbe */
+      margin-left: 20px;
+    }
+
+
+    /* Themenbereich in der Mitte, ebenfalls 40 % der Breite */
+    #chatbot-themes {
+      display: flex;
+      align-items: center; /* Zentriert das Dropdown vertikal */
+      width: 100px; 
+      max-width: 40%; /* Nimmt 40 % der Breite von `#chatbot-header` ein */
+      justify-content: center; /* Zentriert das Dropdown horizontal */
+      margin-left: 10px;
+    }
+
+    /* Dropdown-Styling für #theme */
+    #theme {
+      width: 100%; /* Nimmt die volle Breite der jeweiligen Container ein */
+      padding: 5px; /* Optionales Padding für bessere Lesbarkeit */
+      box-sizing: border-box; /* Bezieht Padding in die Gesamtbreite ein */
+      font-family: var(--company-font-family);
+      font-size: var(--font-size-text);
+      color: var(--primary-font-color);
+      border: none;
+      background-color: var(--primary-background-color); /* Setzt die Hintergrundfarbe */
+    }
+
+    /* Rechtsseitiger Bereich für Icons, nimmt 20 % der Breite ein */
+    #chatbot-icons {
+      display: flex;
+      align-items: center; /* Zentriert die Icons vertikal */
+      justify-content: flex-end; /* Positioniert Icons rechts im Header */
+      flex-grow: 1;
+      width: 20%; /* Nimmt 20 % der Breite von `#chatbot-header` ein */
+    }
+
+    
+
+
+
+
 
 
 
@@ -635,220 +1860,6 @@ body.modal-open {
   color: var(--website-standard-font-color-dark);
 }
 
-
-/* Stil für den Contact Form Container */
-#contact-form-container {
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden; /* Verhindert ungewolltes Scrollen */
-  padding: 0px 9px 0px 8px;
-  position: relative;
-  }
-
-
-
-/* Stil für das Eingabefeld Aktennummer im Contact Form */
-#contact-form-aktennummer {
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
-  border-radius: var(--primary-border-radius);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none;
-  height: 42px; /* Minimale Höhe */
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: relative;
-}
-
-#contact-form-aktennummer,
-#contact-form-aktennummer:focus,
-#contact-form-aktennummer:valid {
-    background-color: var(--primary-background-color);
-}
-
-
-/* Stil für den Platzhaltertext im Eingabefeld */
-#contact-form-aktennummer::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
-
-
-
-/* Stil für das Eingabefeld Name im Contact Form */
-#contact-form-name {
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
-  border-radius: var(--primary-border-radius);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none;
-  height: 42px; /* Minimale Höhe */
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: relative;
-}
-
-#contact-form-name,
-#contact-form-name:focus,
-#contact-form-name:valid {
-    background-color: var(--primary-background-color);
-}
-
-
-/* Stil für den Platzhaltertext im Eingabefeld */
-#contact-form-name::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
-
-
-
-/* Stil für das Eingabefeld email im Contact Form */
-#contact-form-email {
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
-  border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none;
-  height: 42px; /* Minimale Höhe */
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Stil für den Platzhaltertext im Eingabefeld */
-#contact-form-email::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
-
-
-
-/* Stil für das Eingabefeld Nachricht im Contact Form */
-#contact-form-nachricht {
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
-  border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none; /* Kein manuelles Vergrößern des Feldes */
-  box-sizing: border-box;
-  overflow: auto; /* Scrollbar erscheint bei mehr als 6 Zeilen Text */
-  white-space: normal; /* Mehrzeiliger Text zulassen */
-  max-height: calc(1.5em * 6 + 20px); /* Maximalhöhe auf 6 Zeilen beschränkt + Padding */
-}
-
-
-
-/* Stil für das Eingabefeld Nachricht im Modaldialog*/
-#modalMessage {
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
-  border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none; /* Kein manuelles Vergrößern des Feldes */
-  box-sizing: border-box;
-  overflow: auto; /* Scrollbar erscheint bei mehr als 6 Zeilen Text */
-  white-space: normal; /* Mehrzeiliger Text zulassen */
-  max-height: calc(1.5em * 6 + 20px); /* Maximalhöhe auf 6 Zeilen beschränkt + Padding */
-}
-
-
-
-
-
-#contact-form-nachricht,
-#contact-form-nachricht:focus,
-#contact-form-nachricht:valid {
-    background-color: var(--primary-background-color);
-}
-
-#modalMessage,
-#modalMessage:focus,
-#modalMessage:valid {
-    background-color: var(--primary-background-color);
-}
-
-
-
-
-
-
-
-/* Stil für den Platzhaltertext im Nachrichtenfeld */
-#contact-form-nachricht::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
-
-
-/* Stil für den Platzhaltertext im Nachrichtenfeld im Modaldialog */
-#modalMessage::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
 
 
 
@@ -883,7 +1894,7 @@ body.modal-open {
 #instant-answer-dialog-button {
   display: block;
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -905,7 +1916,7 @@ body.modal-open {
 #instant-answer-dialog-schliessen-button {
   display: none;
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -926,7 +1937,7 @@ body.modal-open {
   display: none;
   z-index: 1000;
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -948,7 +1959,7 @@ body.modal-open {
 /*#instant-answer-button {
   display: block;
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -970,7 +1981,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   max-height: 500px;
-  border: 2px solid var(--tertiary-border-color);
+  border: 2px solid var(--secondary-company-color); /*var(--tertiary-border-color);*/
   border-radius: var(--primary-border-radius);
   background-color: var(--primary-background-color);
   display: flex;
@@ -978,26 +1989,6 @@ body.modal-open {
   box-sizing: border-box;
   z-index: 2; 
 }
-
-
-
-
-#chatbot-header {
-  height: 70px;
-  padding: 0px;
-  border-bottom: 1px solid #ddd;
-  box-sizing: border-box;
-}
-
-
-.chatbot-header-content {
-  flex: 2;
-  text-align: left;
-  padding: 0px 10px 0px 25px;
-}
-
-
-
 
 
 
@@ -1025,6 +2016,8 @@ body.modal-open {
 
 
 .title-content .custom0a-p {
+  font-family: var(--company-font-family);
+  font-weight: bold;
   color: var(--primary-font-color);
   font-size: var(--font-size-title);
   margin-top: 0;
@@ -1047,65 +2040,6 @@ body.modal-open {
 
 
 
-
-
-
-#chatbot-language-container {
-  display: flex;
-  align-items: center;
-  padding: 0px 10px 10px 0px;
-  flex-wrap: nowrap; /* Verhindert das Umfließen der Elemente */
-}
-
-
-#chatbot-language {
-  width: 100%;
-  text-align: left;
-  margin-top:20px;
-  margin-bottom:20px;
-}
-
-
-#language-selection {
-  position: relative;
-  display: inline-block;
-}
-
-
-
-#selected-flag {
-  flex-shrink: 0; /* Verhindert, dass die Fahne schrumpft */
-  margin-right: 10px; /* Fügt einen Abstand zwischen Fahne und Dropdown ein */
-}
-
-
-
-#language-dropdown {
-  flex-grow: 1; /* Das Dropdown nimmt den verbleibenden Platz ein */
-  width: 100%; /* Setzt die Breite auf 100% des verfügbaren Platzes */
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  border: none;
-  padding-left: 40px;
-  background-color: var(--primary-background-color); /* Setzt die Hintergrundfarbe */
-}
-
-
-
-/*
-#clara-image {
-  background-image: var(--clara-image-url);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20%;
-  height: auto;
-  padding-bottom: 20%;
-  margin-right: 25px;
-
-}
-*/
 
 #clara-image {
   background-image: var(--clara-image-url);
@@ -1131,6 +2065,7 @@ body.modal-open {
 
 /* Äußerer Container für den Bereich Consent */
 #chatbot-consent-container {
+  display: block;
   padding: 10px 10px 10px 0px;
   border-bottom: 0px solid var(--primary-border-color);
 }
@@ -1191,6 +2126,7 @@ body.modal-open {
 
 
 #chatbot-consent label {
+  font-family: var(--company-font-family);
   font-size: var(--font-size-finePrint);
   margin-left: 10px;
 }
@@ -1219,6 +2155,7 @@ body.modal-open {
 
 
 .suggested-title {
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   font-weight: bold;
   padding: 0px 0px 10px 0px;
@@ -1242,6 +2179,7 @@ body.modal-open {
 .suggested-question-item {
     display: none;
     /*font-size: var(--font-size-text);
+    font-family: var(--company-font-family);
     background-color: var(--secondary-background-color); 
     border: 1px solid var(--primary-border-color);
     padding: 8px 15px;
@@ -1267,53 +2205,13 @@ body.modal-open {
 
 
 
-#chatbot-themes {
-  width: 100%;
-  text-align: left;
-  margin-top:20px;
-  margin-bottom:20px;
-}
-
-
-#theme-selection {
-  position: relative;
-  display: inline-block;
-}
-
-
-#theme {
-  /* flex-grow: 1; Das Dropdown nimmt den verbleibenden Platz ein */
-  /* width: 100%; Setzt die Breite auf 100% des verfügbaren Platzes */
-  font-family: inherit;
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  border: none;
-  padding-left: 0px;
-  background-color: var(--primary-background-color); /* Setzt die Hintergrundfarbe */
-
-}
-
-
-  
-
-
-
-
-#chatbot-icons {
-  width: 100%;
-  margin-top:20px;
-  margin-bottom:20px;
-  display: flex;
-  justify-content: flex-end; /* Elemente nach rechts ausrichten */
-}
-
-
 
 
 
 /* Stilierung des Bereichs für die eingefügten Fragen und Antworten im Chatbot */
 #chatbot-messages-gpt div {
   border-radius: var(--primary-border-radius);
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text); /* Schriftgröße für Nachrichten */
   text-align: left;
 }
@@ -1324,7 +2222,8 @@ body.modal-open {
 #chatbot-messages-gpt .user-message {
   padding: 10px 20px 15px 35px;
   background-color: var(--primary-background-color);
-  color: var(--secondary-font-color);
+  color: var(--primary-font-color);
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   font-weight: bold;
   text-align: left;
@@ -1336,6 +2235,7 @@ body.modal-open {
 
 /* Stil für die Nachrichten des Bots */
 #chatbot-messages-gpt .bot-message {
+  font-family: var(--company-font-family);
   padding: 5px 20px 15px 35px;
   background-color: var(--primary-background-color);
   text-align: left;
@@ -1352,6 +2252,7 @@ body.modal-open {
 /* Special Links */
 .special-link-consent {
   color: var(--primary-link-color) !important;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   text-decoration: underline; /* Optional, wenn du möchtest, dass Links unterstrichen sind */
 }
@@ -1363,6 +2264,7 @@ body.modal-open {
 
 /* Stil für den Consent-Text */
 #chatbot-consent-label {
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
 }
 
@@ -1401,6 +2303,7 @@ body.modal-open {
 /* Überschriften im Chatbot */
 .special-heading {
   color: var(--primary-company-color);
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   font-weight: bold;
   margin: 0;
@@ -1410,6 +2313,7 @@ body.modal-open {
 
 .special-heading-in-standard-color {
   color: var(--website-standard-font-color-dark);
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   font-weight: bold;
   margin: 0;
@@ -1479,7 +2383,7 @@ body.modal-open {
 /* Stil für das Eingabefeld im Chatbot */
 #chatbot-input {
   flex-grow: 1;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   color: var(--primary-font-color);
   font-weight: normal;
@@ -1506,8 +2410,10 @@ body.modal-open {
 /* Stil für den Platzhaltertext im Eingabefeld */
 #chatbot-input::placeholder {
   color: var(--secondary-font-color);
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   font-style: italic;
+  font-weight: normal;
   padding-left: 0px;
 }
 
@@ -1556,7 +2462,7 @@ body.modal-open {
   width: 100%;
   height: calc(100% - 40px);
   padding: 10px;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   color: var(--primary-font-color);
   border: none;
@@ -1571,7 +2477,7 @@ body.modal-open {
 
 /* Mikrofon Button */
 #micButton {
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -1598,7 +2504,7 @@ body.modal-open {
 
 /* OK Button */
 #modal-ok-button {
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -1624,14 +2530,14 @@ body.modal-open {
 
 /* Container für die Button im Eingabebereich */
 #input-button-container {
-  position: sticky;
-  bottom: 0px;
+  position: relative;
+  bottom: 0;
   justify-content: flex-start; /* Buttons linksbündig platzieren */
   gap: 10px;
   width: 100%;
   height: auto;
   padding: 10px;
-  margin-top: 15px;
+  margin-top: 0px;
   z-index: 2;
   }
 
@@ -1639,7 +2545,7 @@ body.modal-open {
 
 /* Container für die Outlook-Integrations-Button */
 #back-to-outlook-container {
-  position: sticky;
+  position: fixed;
   bottom: 0px;
   justify-content: center;
   width: 100%;
@@ -1656,7 +2562,7 @@ body.modal-open {
 /* Senden Button im Eingabebereich */
 #chatbot-send-button {
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 25px;
   border: none;
@@ -1678,7 +2584,7 @@ body.modal-open {
 
 /* Leeren Button im Eingabebereich */
 #chatbot-clear-button {
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   margin-left: 10px;
   padding: 10px 20px;
@@ -1700,7 +2606,7 @@ body.modal-open {
 .okAndnotOK-Button {
   z-index: 1000;
   width: 100%;
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   margin-top: 15px;
   padding: 10px 20px;
@@ -1722,7 +2628,7 @@ body.modal-open {
 
 /* Hilfe anzeigen Button */
 #chatbot-Help-button {
-  font-family: inherit;
+  font-family: var(--company-font-family);
   font-size: var(--font-size-button);
   padding: 10px 20px;
   border: none;
@@ -1747,7 +2653,7 @@ body.modal-open {
   left: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
-  width: auto;
+  max-width: 80%;
   position: absolute;
   margin: 0 auto;
   justify-content: center; /* Horizontale Zentrierung */
@@ -1774,6 +2680,7 @@ body.modal-open {
 
 
 #loader-text {
+  font-family: var(--company-font-family);
   font-size: var(--primary-font-size);
   color: #fff;
   background-color: var(--primary-company-color);
@@ -1784,7 +2691,7 @@ body.modal-open {
   text-align: center; /* Text zentrieren */
   max-width: 100%; /* Maximal 90% der Bildschirmbreite */
   margin-top: 15px;
-  white-space: nowrap; /* Verhindert das Umbrechen des Textes */
+  /* white-space: nowrap; Verhindert das Umbrechen des Textes */
   
   }
 
@@ -1903,7 +2810,7 @@ body.modal-open {
 
 
 .hmd-button {
-    font-family: inherit;
+    font-family: var(--company-font-family);  
     font-size: var(--font-size-button);
     padding: 10px 20px;
     border: none;
@@ -1957,7 +2864,8 @@ body.modal-open {
     width: 100%; /* Nimmt die volle Breite des Containers ein */
     display: block; /* Stellt sicher, dass der Text als Block angezeigt wird */
     font-size: var(--company-font-size-text);
-
+    font-family: var(--company-font-family);
+    font-weight: 500;
 }
 
 
@@ -1970,7 +2878,7 @@ body.modal-open {
 }
 
 .ccm-button {
-    font-family: inherit;
+    font-family: var(--company-font-family);
     font-size: var(--font-size-button);
     padding: 10px 20px;
     border: none;
@@ -1997,31 +2905,29 @@ body.modal-open {
     top: 0%;
     width: 100%;
     height: 100%;
-    display: flex; /* Flexbox für Zentrierung */
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--modal-background);
     box-sizing: border-box;
-    pointer-events: auto; /* Interaktionen sind erlaubt */
+    pointer-events: auto;
 }
 
 
 
-/* Dialog-Container */
 .send-confirmation-dialog {
     z-index: 10000000 !important;
     position: absolute;
     background-color: var(--primary-background-color);
     left: 50%;
     top: 50%;
-    width: 40%;
+    width: 60%;
     max-width: 60vh;
     height: auto;
     max-height: 75vh;
     transform: translate(-50%, -50%); /* Zentriert den Dialog */
     pointer-events: auto; /* Interaktionen sind erlaubt */
     box-sizing: border-box;
-    z-index: 1002;
     border: 2px solid var(--primary-border-color);
     border-radius: var(--primary-border-radius);
     display: flex;
@@ -2033,15 +2939,19 @@ body.modal-open {
 
 
 .send-confirmation-content {
-    flex: 1; /* Nimmt den verfügbaren Platz ein */
-    overflow: auto;
+    flex: 1; 
+    box-sizing: border-box;
+    overflow-y: auto;
     padding: 40px;
     max-height:50vh;
     position: relative;
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
+    border: 2px solid var(--primary-border-color);
+    border-radius: var(--primary-border-radius);
 }
+
 
 
 .send-confirmation-content .custom2-h2 {
@@ -2067,6 +2977,46 @@ body.modal-open {
     color: var(--tertiary-font-color-dark);
     margin-bottom: 10px;
 }
+
+
+
+
+
+
+.send-confirmation-content .email-nachricht {
+  font-family: var(--company-font-family);
+  font-size: var(--font-size-text);
+  color: var(--primary-font-color);
+  font-weight: normal;
+  padding: 10px 10px 10px 30px;
+  border: 2px solid var(--tertiary-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--primary-background-color);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: normal;
+  max-height: calc(1.5em * 6 + 20px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2203,7 +3153,7 @@ body.modal-open {
     text-align: center; 
     flex: 1; /* Nimmt den verfügbaren Platz ein */
     overflow: auto;
-    padding: 30px;
+    padding: 10px 0px 10px 0px;
     max-height:50vh;
     width: 100%;
     color: var(--secondary-font-color);
@@ -2226,7 +3176,7 @@ body.modal-open {
 
 
 .modal-standard-button {
-    font-family: inherit;
+    font-family: var(--company-font-family);
     font-size: var(--font-size-button);
     padding: 10px 20px;
     border: none;
@@ -2248,15 +3198,15 @@ body.modal-open {
 input:-webkit-autofill,
 textarea:-webkit-autofill {
   background-color: var(--primary-background-color) !important;
-  color: inherit !important;
+  color: var(--primary-background-color) !important;
 }
 
 
 
-#toggle-container {
+#section-container {
   padding: 0;
   margin: 0;
-}
+  }
 
 
 
@@ -2276,23 +3226,47 @@ textarea:-webkit-autofill {
 
 </div>
 
-<div id="separate-header">
+
+<div id="contact-form-title-container">
+
+  <div class="contact-form-title-content">
+
+      <p class="contact-form-custom0c-p">Chat Assistant</p>
+
+  </div>
+
+</div>
+
+<div id="contact-form-section-container">
+
+<div id="contact-form-container">
+
+  <input type="text" id="contact-form-aktennummer" name="aktennummer" placeholder="Aktennummer" maxlength="500" autocomplete="name" required />
+
+  <input type="text" id="contact-form-name" name="name" placeholder="Vor- und Nachname" maxlength="500" autocomplete="name" required />
+
+  <input type="email" id="contact-form-email" name="email" placeholder="E-Mail-Adresse" maxlength="100" autocomplete="email" required />
+
+  <textarea id="contact-form-nachricht" name="Kontaktnachricht" rows="6" placeholder="Ihr Anliegen / Ihre Nachricht" maxlength="2000" required></textarea>
+
+</div>
 
 </div>
 
 
-
+<div id="section-container">
 
 <div id="toggle-container">
+
 
 <div id="title-container">
 
 
     <div class="title-content">
 
-        <p class="custom0a-p">Hallo, ich bin Clara,</p>
-        <p class="custom0b-p">wenn Sie Fragen zum Thema Forderungsmanagement oder zum Unternehmen "cream collection Stephan Vila" (kurz "creamco") haben, dann sind Sie hier genau richtig. Ich weiß aber noch viel mehr. Versuchen Sie es einfach.</p>
-        <p class="custom0c-p">wie kann ich Ihnen helfen?</p>
+        <p class="custom0a-p">Hallo, ich bin Chati,</p>
+        <p class="custom0b-p">wenn Sie Fragen zum Thema Forderungsmanagement oder zu meinem Unternehmen haben, dann sind Sie hier genau richtig. Ich weiß aber noch viel mehr. Versuchen Sie es einfach.</p>
+        <p class="custom0c-p">Chat Assistant</p>
 
 
     </div>
@@ -2306,17 +3280,7 @@ textarea:-webkit-autofill {
 
 
 
-<div id="contact-form-container">
 
-    <input type="text" id="contact-form-aktennummer" name="aktennummer" placeholder="Bitte Aktennummer eingeben, wenn vorhanden." maxlength="500" autocomplete="name" required />
-
-    <input type="text" id="contact-form-name" name="name" placeholder="Bitte Vor- und Nachnamen eingeben." maxlength="500" autocomplete="name" required />
-
-    <input type="email" id="contact-form-email" name="email" placeholder="Ihre E-Mail-Adresse" maxlength="100" autocomplete="email" required />
-
-    <textarea id="contact-form-nachricht" name="Kontaktnachricht" rows="6" placeholder="Bitte beschreiben Sie Ihr Anliegen." maxlength="2000" required></textarea>
-
-</div>
 
 
 
@@ -2802,81 +3766,59 @@ textarea:-webkit-autofill {
 
         <div id="chatbot-header">
 
-            <div class="chatbot-header-content">
-          
-                <div id="chatbot-language-container">
+          <div id="chatbot-language">
 
-                    <div id="chatbot-language">
+            <span id="selected-flag" class="flag-icon flag-icon-de" style="position:absolute;left:0px;top:50%;transform:translateY(-50%)"></span>
+            <select id="language-dropdown" onchange="updateFlagAndSendMessage()">
+              <option value="Deutsch" data-flag="flag-icon-de">Deutsch...</option>
+              <option value="Englisch" data-flag="flag-icon-gb">English</option>
+              <option value="Spanisch" data-flag="flag-icon-es">Español</option>
+              <option value="Türkisch" data-flag="flag-icon-tr">Türkçe</option>
+              <option value="Arabisch" data-flag="flag-icon-sa">العربية</option>
+              <option value="Russisch" data-flag="flag-icon-ru">Русский</option>
+              <option value="Polnisch" data-flag="flag-icon-pl">Polski</option>
+              <option value="Rumänisch" data-flag="flag-icon-ro">Română</option>
+              <option value="Griechisch" data-flag="flag-icon-gr">Ελληνικά</option>
+              <option value="Italienisch" data-flag="flag-icon-it">Italiano</option>
+            </select>
+                        
+          </div>
 
-                        <div id="language-selection">
-                            <span id="selected-flag" class="flag-icon flag-icon-de" style="position:absolute;left:0px;top:50%;transform:translateY(-50%)"></span>
-                            <select id="language-dropdown" onchange="updateFlagAndSendMessage()">
-                                <option value="Deutsch" data-flag="flag-icon-de">Deutsch...</option>
-                                <option value="Englisch" data-flag="flag-icon-gb">English</option>
-                                <option value="Spanisch" data-flag="flag-icon-es">Español</option>
-                                <option value="Türkisch" data-flag="flag-icon-tr">Türkçe</option>
-                                <option value="Arabisch" data-flag="flag-icon-sa">العربية</option>
-                                <option value="Russisch" data-flag="flag-icon-ru">Русский</option>
-                                <option value="Polnisch" data-flag="flag-icon-pl">Polski</option>
-                                <option value="Rumänisch" data-flag="flag-icon-ro">Română</option>
-                                <option value="Griechisch" data-flag="flag-icon-gr">Ελληνικά</option>
-                                <option value="Italienisch" data-flag="flag-icon-it">Italiano</option>
-                            </select>
-                        </div>
-                    </div>
+          <div id="chatbot-themes">
 
+            <select id="theme" onchange="handleThemeChange()">
+              <option value disabled selected>Themen:</option>
+              <option value="Bitte zeige mir eine aktuelle Forderungsaufstellung an. Beachte die Formatierungsanweisungen.">Forderungsaufstellung</option>
+              <option value="Bitte erkläre mir den Grund der Forderung. Wer ist der Gläubiger und was habe ich genutzt?">Forderungsgrund</option>
+              <option value="Bitte zeige mir meine eingegangenen bzw. verbuchten Zahlungen an.">Zahlungseingang</option>
+              <option value="Ich möchte eine Ratenzahlung beantragen.">Ratenzahlung</option>
+              <option value="Ich bin sicher, die Leistung nicht genutzt bzw. den Kauf getätigt zu haben. Was muss ich tun?">Widerspruch</option>
+              <option value="Wer oder was ist Königs Inkasso?">Über Königs Inkasso</option>
+            </select>
 
+          </div>
 
-        
-                    <div id="chatbot-themes">
+          <div id="chatbot-icons">
 
-                       <div id="theme-selection">
-                           <select id="theme" onchange="handleThemeChange()">
-                               <option value disabled selected>Beliebte Themen:</option>
-                               <option value="Wer oder was ist cream collection?">Über cream collection</option>
-                               <option value="Wer ist Stephan Vila und was weißt du über ihn?">Über Stephan Vila</option>
-                               <option value="Welche Leistungen bietet cream collection an?">Leistungen</option>
-                               <option value="Wie lauten die Kontaktdaten von cream collection?">Kontakt</option>
-                               <option value="Was genau ist Forderungsmanagement?">Forderungsmanagement Definition</option>
-                               <option value="Welche Bedeutung hat das Forderungsmanagement für Unternehmen und Organisationen?">Forderungsmanagement Bedeutung</option>
-                           </select>
+            <svg class="icon3 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Hilfe" onclick="showHelpModal()">  
+            <title>Hilfe</title>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z">
+            </path>
+            </svg>
 
-                       </div>
+            <svg class="icon2 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Chat-Historie löschen" onclick="openDeleteConfirmation()"> 
+            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0">
+            <title>Chat-Historie löschen</title>
+            </path>
+            </svg>
 
-                    </div>
-
-
-
-                    <div id="chatbot-icons">
-
-                    <svg class="icon3 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Hilfe" onclick="showHelpModal()">  
-                    <title>Hilfe</title>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z">
-                    </path>
-                    </svg>
-
-
-
-                    <svg class="icon2 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Chat-Historie löschen" onclick="openDeleteConfirmation()"> 
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0">
-                    <title>Chat-Historie löschen</title>
-                    </path>
-                    </svg>
-
-
-
-                    <svg class="icon4 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Chat-Historie löschen und Chatbot schließen" onclick="openDeleteConfirmation2()">  
-                    <title>Chat-Historie löschen und Chatbot schließen</title>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z">
-                    </path>
-                    </svg>
+            <svg class="icon4 hover-scale" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" title="Chat-Historie löschen und Chatbot schließen" onclick="openDeleteConfirmation2()">  
+            <title>Chat-Historie löschen und Chatbot schließen</title>
+            <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z">
+            </path>
+            </svg>
                     
-                    </div>
-
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
 
@@ -2911,7 +3853,7 @@ textarea:-webkit-autofill {
             <div id="chatbot-input-inner-container">
 
                 <div id="input-left"> 
-                <textarea id="chatbot-input" placeholder="Sie haben weitere Fragen? Wie kann ich Ihnen helfen?" maxlength="2000"></textarea>
+                <textarea id="chatbot-input" placeholder="Wie kann ich Ihnen helfen?" maxlength="2000"></textarea>
                 </div>
                 <div id="input-right"> 
 
@@ -3000,7 +3942,7 @@ textarea:-webkit-autofill {
             <p><strong>Ihre E-Mail-Adresse:</strong></p>
             <p><span id="modalEmail"></span></p>
             <p><strong>Ihre Nachricht:</strong></p>
-            <textarea id="modalMessage" cass="contact-form-nachricht" style="white-space:pre-wrap" name="Nachricht" rows="4" placeholder="Bitte beschreiben Sie Ihr Anliegen." maxlength="2000"></textarea>
+            <textarea id="modalMessage" class="email-nachricht" style="white-space:pre-wrap" name="Nachricht" rows="4" placeholder="Ihr Anliegen / Ihre Nachricht" maxlength="2000"></textarea>
             <p> </p>
             <p><strong>Übersetzte Chat-Historie:</strong></p>
             <div id="translated-chat-history" style="white-space:pre-wrap">
@@ -3036,7 +3978,15 @@ textarea:-webkit-autofill {
 
 </div>
 
+</div>
+	
+<div id="footer">
 
+</div>
+
+
+
+	
 
 
 <script>
@@ -3087,7 +4037,7 @@ const textTranslations = {
         "consentText": "Ich habe die <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>Nutzungsbedingungen und Datenschutzerklärung</a> gelesen, verstanden und akzeptiert.",
         "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
         "commonQuestions": "aktuell nicht in Benutzung",
-        "selectQuestion": "aktuell nicht in Benutzung",
+        "selectQuestion": "Thema",
         "sendButton": "Frage senden",
         "clearButton": "Historie leeren",
         "messageButton": "Nachricht senden",
@@ -3105,7 +4055,7 @@ const textTranslations = {
         "notOK": "Nachricht senden",
         "resetPageText1": "Wir freuen uns, dass wir Ihnen mit diesem Service helfen konnten.",
         "resetPageText2": "Ihre Chat-Historie wird gelöscht und die Nachricht verworfen.",
-        "inputPlaceholder": "Sie haben weitere Fragen? Wie kann ich Ihnen helfen?",
+        "inputPlaceholder": "Wie kann ich Ihnen helfen?",
         "loader-text": "Einen kurzen Augenblick bitte. Ihre Anfrage wird bearbeitet.",
         "chatHistoryDeleted": "Ihre Chat-Historie wird gelöscht.",
         "chatHistoryDeletedAndClosed": "Ihre Chat-Historie wird gelöscht und der Chatbot geschlossen.",
@@ -3118,12 +4068,12 @@ const textTranslations = {
             "aktuell nicht in Benutzung",
         ],   
         "themes": [
-            "aktuell nicht in Benutzung",
-            "aktuell nicht in Benutzung",
-            "aktuell nicht in Benutzung",
-            "aktuell nicht in Benutzung",
-            "aktuell nicht in Benutzung",
-            "aktuell nicht in Benutzung"    
+            "Forderungsaufstellung",
+            "Forderungsgrund",
+            "Zahlungseingang",
+            "Ratenzahlung",
+            "Widerspruch",
+            "Über cream collection"    
         ],
     },
 
@@ -3135,7 +4085,7 @@ const textTranslations = {
         "consentText": "I have read, understood, and accepted the <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>terms of use and privacy policy</a>.",
         "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
         "commonQuestions": "currently not in use",
-        "selectQuestion": "currently not in use",
+        "selectQuestion": "Theme",
         "sendButton": "Send Question",
         "clearButton": "Clear History",
         "messageButton": "Send Message",
@@ -3153,7 +4103,7 @@ const textTranslations = {
         "notOK": "Send message",
         "resetPageText1": "We are glad that we could assist you with this service.",
         "resetPageText2": "Your chat history will be deleted and the message discarded.",
-        "inputPlaceholder": "Do you have more questions? How can I help you?",
+        "inputPlaceholder": "How can I help you?",
         "loader-text": "Please wait a moment. Your request is being processed.",
         "chatHistoryDeleted": "Your chat history will be deleted.",
         "chatHistoryDeletedAndClosed": "Your chat history will be deleted and the chatbot will be closed.",
@@ -3166,12 +4116,12 @@ const textTranslations = {
             "currently not in use"
         ],   
         "themes": [
-            "currently not in use",
-            "currently not in use",
-            "currently not in use",
-            "currently not in use",
-            "currently not in use",
-            "currently not in use"
+            "Statement of claims", 
+            "Reason for claim", 
+            "Incoming payment", 
+            "Installment payment", 
+            "Objection", 
+            "About cream collection"
         ],
 
     },
@@ -3183,7 +4133,7 @@ const textTranslations = {
         "consentText": "He leído, comprendido y aceptado los <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>términos de uso y la política de privacidad</a>.",
         "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
         "commonQuestions": "No está en uso.",
-        "selectQuestion": "No está en uso.",
+        "selectQuestion": "Tema",
         "sendButton": "Enviar Pregunta",
         "clearButton": "Borrar Historial",
         "messageButton": "Enviar Mensaje",
@@ -3201,7 +4151,7 @@ const textTranslations = {
         "notOK": "Enviar mensaje",
         "resetPageText1": "Nos alegra haber podido ayudarle con este servicio.",
         "resetPageText2": "Su historial de chat será eliminado y el mensaje descartado.",
-        "inputPlaceholder": "¿Tienes más preguntas? ¿Cómo puedo ayudarte?",
+        "inputPlaceholder": "¿Cómo puedo ayudarte?",
         "loader-text": "Por favor, espera un momento. Estamos procesando tu solicitud.",
         "chatHistoryDeleted": "Su historial de chat será eliminado.",
         "chatHistoryDeletedAndClosed": "Su historial de chat será eliminado y el chatbot se cerrará.",
@@ -3214,12 +4164,12 @@ const textTranslations = {
             "No está en uso."
         ],   
         "themes": [
-            "No está en uso.",
-            "No está en uso.",
-            "No está en uso.",
-            "No está en uso.",
-            "No está en uso.",
-            "No está en uso."
+            "Declaración de reclamaciones",
+            "Razón de la reclamación",
+            "Pago recibido",
+            "Pago a plazos",
+            "Objeción",
+            "Acerca de cream collection"
         ],
 
      },
@@ -3231,7 +4181,7 @@ const textTranslations = {
     "consentText": "<a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>Kullanım Koşulları ve Gizlilik Politikasını</a> okudum, anladım ve kabul ettim.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "şu anda kullanılmıyor",
-    "selectQuestion": "şu anda kullanılmıyor",
+    "selectQuestion": "Konu",
     "sendButton": "Soru Gönder",
     "clearButton": "Geçmişi Temizle",
     "messageButton": "Mesaj Gönder",
@@ -3249,7 +4199,7 @@ const textTranslations = {
     "notOK": "Mesaj gönder",
     "resetPageText1": "Bu hizmetle size yardımcı olabildiğimiz için mutluyuz.",
     "resetPageText2": "Sohbet geçmişiniz silinecek ve mesaj iptal edilecektir.",
-    "inputPlaceholder": "Başka sorularınız var mı? Size nasıl yardımcı olabilirim?",
+    "inputPlaceholder": "Size nasıl yardımcı olabilirim?",
     "loader-text": "Lütfen bir an bekleyin. Talebiniz işleniyor.",
     "chatHistoryDeleted": "Sohbet geçmişiniz silinecek.",
     "chatHistoryDeletedAndClosed": "Sohbet geçmişiniz silinecek ve chatbot kapatılacak.",
@@ -3262,12 +4212,12 @@ const textTranslations = {
         "şu anda kullanılmıyor"
     ],
     "themes": [
-        "şu anda kullanılmıyor",
-        "şu anda kullanılmıyor",
-        "şu anda kullanılmıyor",
-        "şu anda kullanılmıyor",
-        "şu anda kullanılmıyor",
-        "şu anda kullanılmıyor"
+    "Alacak beyannamesi",
+        "Alacak nedeni",
+        "Gelen ödeme",
+        "Taksitli ödeme",
+        "İtiraz",
+        "cream collection hakkında"
     ]
 },
 
@@ -3278,7 +4228,7 @@ const textTranslations = {
     "consentText": "لقد قرأت وفهمت ووافقت على <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>شروط الاستخدام وسياسة الخصوصية</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "غير مستخدم حاليًا",
-    "selectQuestion": "غير مستخدم حاليًا",
+    "selectQuestion": "موضوع",
     "sendButton": "إرسال السؤال",
     "clearButton": "مسح المحفوظات",
     "messageButton": "إرسال رسالة",
@@ -3296,7 +4246,7 @@ const textTranslations = {
     "notOK": "إرسال الرسالة",
     "resetPageText1": "نحن سعداء لأننا تمكنا من مساعدتك بهذه الخدمة.",
     "resetPageText2": "سيتم حذف سجل المحادثة الخاص بك وسيتم تجاهل الرسالة.",    
-    "inputPlaceholder": "هل لديك المزيد من الأسئلة؟ كيف يمكنني مساعدتك؟",
+    "inputPlaceholder": "كيف يمكنني مساعدتكم؟",
     "loader-text": "يرجى الانتظار لحظة. يتم معالجة طلبك.",
     "chatHistoryDeleted": "سيتم حذف سجل المحادثة الخاص بك.",
     "chatHistoryDeletedAndClosed": "سيتم حذف سجل المحادثة الخاص بك وسيتم إغلاق الروبوت.",
@@ -3309,12 +4259,12 @@ const textTranslations = {
         "غير مستخدم حاليًا"
     ],
     "themes": [
-        "غير مستخدم حاليًا",
-        "غير مستخدم حاليًا",
-        "غير مستخدم حاليًا",
-        "غير مستخدم حاليًا",
-        "غير مستخدم حاليًا",
-        "غير مستخدم حاليًا"
+        "بيان المطالبات",
+        "سبب المطالبة",
+        "الدفعة الواردة",
+        "دفع بالتقسيط",
+        "اعتراض",
+        "حول cream collection"
     ]
 },
 
@@ -3326,7 +4276,7 @@ const textTranslations = {
     "consentText": "Я прочитал, понял и согласен с <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>условиями использования и политикой конфиденциальности</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "в настоящее время не используется",
-    "selectQuestion": "в настоящее время не используется",
+    "selectQuestion": "Тема",
     "sendButton": "Отправить вопрос",
     "clearButton": "Очистить историю",
     "messageButton": "Отправить сообщение",
@@ -3344,7 +4294,7 @@ const textTranslations = {
     "notOK": "Отправить сообщение",
     "resetPageText1": "Мы рады, что смогли помочь вам с этой услугой.",
     "resetPageText2": "История чата будет удалена, а сообщение отменено.",
-    "inputPlaceholder": "У вас есть еще вопросы? Чем я могу вам помочь?",
+    "inputPlaceholder": "Чем я могу вам помочь?",
     "loader-text": "Пожалуйста, подождите немного. Ваш запрос обрабатывается.",
     "chatHistoryDeleted": "История вашего чата будет удалена.",
     "chatHistoryDeletedAndClosed": "История вашего чата будет удалена, и чат-бот будет закрыт.",
@@ -3357,12 +4307,12 @@ const textTranslations = {
         "в настоящее время не используется"
     ],
     "themes": [
-        "в настоящее время не используется",
-        "в настоящее время не используется",
-        "в настоящее время не используется",
-        "в настоящее время не используется",
-        "в настоящее время не используется",
-        "в настоящее время не используется"
+    "Заявление о требованиях",
+        "Основание для требования",
+        "Входящий платеж",
+        "Оплата в рассрочку",
+        "Возражение",
+        "О компании cream collection"
     ]
 },
 
@@ -3375,7 +4325,7 @@ const textTranslations = {
     "consentText": "Przeczytałem, zrozumiałem i zaakceptowałem <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>warunki użytkowania i politykę prywatności</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "obecnie nieużywane",
-    "selectQuestion": "obecnie nieużywane",
+    "selectQuestion": "Temat",
     "sendButton": "Wyślij pytanie",
     "clearButton": "Wyczyść historię",
     "messageButton": "Wyślij wiadomość",
@@ -3393,7 +4343,7 @@ const textTranslations = {
     "notOK": "Wyślij wiadomość",
     "resetPageText1": "Cieszymy się, że mogliśmy pomóc Ci w tej usłudze.",
     "resetPageText2": "Historia czatu zostanie usunięta, a wiadomość odrzucona.",
-    "inputPlaceholder": "Masz więcej pytań? Jak mogę ci pomóc?",
+    "inputPlaceholder": "Jak mogę ci pomóc?",
     "loader-text": "Proszę czekać chwilę. Twoje zapytanie jest przetwarzane.",
     "chatHistoryDeleted": "Twoja historia czatu zostanie usunięta.",
     "chatHistoryDeletedAndClosed": "Twoja historia czatu zostanie usunięta, a chatbot zostanie zamknięty.",
@@ -3406,12 +4356,12 @@ const textTranslations = {
         "obecnie nieużywane"
     ],
     "themes": [
-        "obecnie nieużywane",
-        "obecnie nieużywane",
-        "obecnie nieużywane",
-        "obecnie nieużywane",
-        "obecnie nieużywane",
-        "obecnie nieużywane"
+    "Oświadczenie o roszczeniach",
+        "Podstawa roszczenia",
+        "Wpływ płatności",
+        "Płatność ratalna",
+        "Sprzeciw",
+        "O cream collection"
     ]
 },
 
@@ -3424,7 +4374,7 @@ const textTranslations = {
     "consentText": "Am citit, înțeles și acceptat <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>termenii și condițiile de utilizare și politica de confidențialitate</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "în prezent nu este utilizat",
-    "selectQuestion": "în prezent nu este utilizat",
+    "selectQuestion": "Temă",
     "sendButton": "Trimiteți întrebare",
     "clearButton": "Ștergeți istoricul",
     "messageButton": "Trimiteți mesaj",
@@ -3442,7 +4392,7 @@ const textTranslations = {
     "notOK": "Trimite mesaj",
     "resetPageText1": "Ne bucurăm că v-am putut ajuta cu acest serviciu.",
     "resetPageText2": "Istoricul dvs. de chat va fi șters și mesajul va fi anulat.",
-    "inputPlaceholder": "Aveți alte întrebări? Cum vă pot ajuta?",
+    "inputPlaceholder": "Cum vă pot ajuta?",
     "loader-text": "Vă rugăm să așteptați un moment. Solicitarea dvs. este în curs de procesare.",
     "chatHistoryDeleted": "Istoricul conversațiilor dvs. va fi șters.",
     "chatHistoryDeletedAndClosed": "Istoricul conversațiilor dvs. va fi șters, iar chatbot-ul va fi închis.",
@@ -3455,12 +4405,12 @@ const textTranslations = {
         "în prezent nu este utilizat"
     ],
     "themes": [
-        "în prezent nu este utilizat",
-        "în prezent nu este utilizat",
-        "în prezent nu este utilizat",
-        "în prezent nu este utilizat",
-        "în prezent nu este utilizat",
-        "în prezent nu este utilizat"
+    "Declarație de creanțe",
+        "Motivul creanței",
+        "Plată primită",
+        "Plată în rate",
+        "Obiecție",
+        "Despre cream collection"
     ]
 },
 
@@ -3472,7 +4422,7 @@ const textTranslations = {
     "consentText": "Έχω διαβάσει, κατανοήσει και αποδεχτεί τους <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>όρους χρήσης και την πολιτική απορρήτου</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "αυτήν τη στιγμή δεν χρησιμοποιείται",
-    "selectQuestion": "αυτήν τη στιγμή δεν χρησιμοποιείται",
+    "selectQuestion": "Θέμα",
     "sendButton": "Υποβολή Ερώτησης",
     "clearButton": "Διαγραφή Ιστορικού",
     "messageButton": "Αποστολή Μηνύματος",
@@ -3490,7 +4440,7 @@ const textTranslations = {
     "notOK": "Αποστολή μηνύματος",
     "resetPageText1": "Χαιρόμαστε που μπορέσαμε να σας βοηθήσουμε με αυτή την υπηρεσία.",
     "resetPageText2": "Το ιστορικό συνομιλιών σας θα διαγραφεί και το μήνυμα θα απορριφθεί.",
-    "inputPlaceholder": "Έχετε περισσότερες ερωτήσεις; Πώς μπορώ να σας βοηθήσω;",
+    "inputPlaceholder": "Πώς μπορώ να σας βοηθήσω;",
     "loader-text": "Παρακαλώ περιμένετε λίγο. Το αίτημά σας επεξεργάζεται.",
     "chatHistoryDeleted": "Το ιστορικό συνομιλιών σας θα διαγραφεί.",
     "chatHistoryDeletedAndClosed": "Το ιστορικό συνομιλιών σας θα διαγραφεί και το chatbot θα κλείσει.",
@@ -3503,12 +4453,12 @@ const textTranslations = {
         "αυτήν τη στιγμή δεν χρησιμοποιείται"
     ],
     "themes": [
-        "αυτήν τη στιγμή δεν χρησιμοποιείται",
-        "αυτήν τη στιγμή δεν χρησιμοποιείται",
-        "αυτήν τη στιγμή δεν χρησιμοποιείται",
-        "αυτήν τη στιγμή δεν χρησιμοποιείται",
-        "αυτήν τη στιγμή δεν χρησιμοποιείται",
-        "αυτήν τη στιγμή δεν χρησιμοποιείται"
+        "Κατάσταση απαιτήσεων",
+        "Λόγος απαίτησης",
+        "Εισερχόμενη πληρωμή",
+        "Πληρωμή σε δόσεις",
+        "Αντίρρηση",
+        "Σχετικά με το cream collection"
     ]
 },
 
@@ -3519,7 +4469,7 @@ const textTranslations = {
     "consentText": "Ho letto, compreso e accettato i <a id='consent-link' class='special-link' href='{{dataProtectionUrl}}' target='_blank'>termini di utilizzo e l'informativa sulla privacy</a>.",
     "dataProtectionUrl": "https://www.cream-collection.de/nutzung-and-datenschutz-chatbot/",
     "commonQuestions": "attualmente non in uso",
-    "selectQuestion": "attualmente non in uso",
+    "selectQuestion": "Tema",
     "sendButton": "Invia domanda",
     "clearButton": "Cancella cronologia",
     "messageButton": "Invia messaggio",
@@ -3537,7 +4487,7 @@ const textTranslations = {
     "notOK": "Invia messaggio",
     "resetPageText1": "Siamo felici di aver potuto aiutarvi con questo servizio.",
     "resetPageText2": "La cronologia della chat verrà cancellata e il messaggio verrà eliminato.",
-    "inputPlaceholder": "Hai altre domande? Come posso aiutarti?",
+    "inputPlaceholder": "Come posso aiutarti?",
     "loader-text": "Attendere un momento. La tua richiesta è in fase di elaborazione.",
     "chatHistoryDeleted": "La cronologia della chat verrà eliminata.",
     "chatHistoryDeletedAndClosed": "La cronologia della chat verrà eliminata e il chatbot verrà chiuso.",
@@ -3550,12 +4500,12 @@ const textTranslations = {
         "attualmente non in uso"
     ],
     "themes": [
-        "attualmente non in uso",
-        "attualmente non in uso",
-        "attualmente non in uso",
-        "attualmente non in uso",
-        "attualmente non in uso",
-        "attualmente non in uso"
+        "Dichiarazione delle pretese",
+        "Motivo della pretesa",
+        "Pagamento ricevuto",
+        "Pagamento rateale",
+        "Obiezione",
+        "Informazioni su cream collection"
     ]
 },
 
@@ -3825,6 +4775,12 @@ async function sendMessage() {
        document.getElementById('loader-container').style.display = 'flex';
        document.getElementById('loader-text').style.display = 'block';
 
+    // Scrollt die Seite sanft nach oben
+       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const inputField = document.getElementById('chatbot-input');
+    inputField.blur(); // Entfernt den Fokus und schließt die Tastatur auf Mobilgeräten
+
 
     // Kontext und Kunde aus den CSS-Variablen holen
     const rulesContext = getComputedStyle(document.documentElement).getPropertyValue('--rules-context').trim();
@@ -4037,7 +4993,7 @@ function setThemesDropdownInDOM(language) {
   const themesContainer = document.getElementById('theme');
 
   const themesHTML = `
-    <option value="">-- ${translations.selectQuestion} --</option>
+    <option value="">${translations.selectQuestion}</option>
     ${translations.themes.map(theme => `
       <option value="${theme}">${theme}</option>
     `).join('')}
@@ -4069,6 +5025,9 @@ function updateFlagAndSendMessage() {
     // Übersetze den Text basierend auf der ausgewählten Sprache
     const translations = textTranslations[selectedLanguage];
     console.log("Übersetzungen geladen:", translations);
+
+    // Aktualisiere die `Themes`-Dropdown-Optionen:
+    setThemesDropdownInDOM(selectedLanguage);
 
     // Ersetze {{dataProtectionUrl}} im consentText durch die URL aus den Sprachdaten
     const consentTextWithUrl = translations.consentText.replace('{{dataProtectionUrl}}', translations.dataProtectionUrl);
@@ -4228,6 +5187,9 @@ function sendLanguageMessage() {
       const inputElement = document.getElementById('chatbot-input');
       inputElement.value = message;
       sendMessage(); // Sende die vorgefertigte Nachricht
+   
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
     }
 
 
@@ -4297,7 +5259,7 @@ document.getElementById('chatbot-consent-checkbox').addEventListener('change', f
     document.getElementById('chatbot-send-button').disabled = !isChecked;
     document.getElementById('chatbot-clear-button').disabled = !isChecked;
 
-    // SVG-Icons je nach Status der Checkbox aktivieren oder deaktivieren
+      // SVG-Icons je nach Status der Checkbox aktivieren oder deaktivieren
     const icons = document.querySelectorAll('.icon.hover-scale');
     icons.forEach(icon => {
         if (isChecked) {
@@ -5036,6 +5998,8 @@ const companyMainUrl = getComputedStyle(document.documentElement)
 
 // Füge die URL zum Link hinzu
 document.getElementById('company-main-url').href = companyMainUrl;
+
+
 
 
 
