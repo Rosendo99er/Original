@@ -4579,11 +4579,16 @@ textarea:-webkit-autofill {
           <span id="modalAktennummer"></span></p><br>
         <p><strong>Ihr Name:</strong><br>
         <span id="modalName"></span></p><br>
+
         <p><strong>Ihre E-Mail-Adresse:</strong><br>
-        <input type="email" class="modal-contact-form-email" name="modal-email" placeholder="Ihre E-Mail-Adresse" maxlength="500" autocomplete="email" required /><br>
+        <input type="email" class="contact-form-email" name="modalEmail" placeholder="Ihre E-Mail-Adresse" maxlength="500" autocomplete="email" required /><br>
         <span id="modal-email-error" style="display: none; color: red; font-size: 0.9em;">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+        
+        
         <p><strong>Ihre Nachricht:</strong></p>
         <textarea id="modalMessage" class="email-nachricht" style="white-space:pre-wrap" name="Nachricht" rows="4" placeholder="Ihr Anliegen / Ihre Nachricht" maxlength="2000"></textarea>
+        
+        
         <p><strong><br>Übersetzte Chat-Historie:</strong></p><br>
         <div id="translated-chat-history" style="white-space:pre-wrap">
         </div>
@@ -7301,11 +7306,7 @@ async function openConfirmationModal() {
     document.getElementById("modalRechnungsnummer").innerText = rechnungsnummerValue;
     document.getElementById("modalAktennummer").innerText = aktennummerValue;
     document.getElementById("modalName").innerText = nameValue;
-    
-    
-    document.querySelector('.modal-contact-form-email').innerText = emailValue;
-    
-    
+    document.getElementById("modalEmail").innerText = emailValue;
     document.getElementById("modalMessage").value = messageValue;
 
 
@@ -7760,7 +7761,7 @@ function closeSuggestionBox() {
 });
 
 
-
+//Funktion zur Überprüfung des E-Mail-Eingabefeldes auf korrekte E-Mail-Adresse im Factoring-Kontext
 document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.querySelector('input[name="factoring-email"]');
     const errorElement = document.getElementById("factoring-email-error");
@@ -7781,7 +7782,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-//Funktion zur Überprüfung des E-Mail-Eingabefeldes auf korrekte E-Mail-Adresse
+//Funktion zur Überprüfung des E-Mail-Eingabefeldes auf korrekte E-Mail-Adresse im Standard-Kontext
 document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.querySelector('input[name="email"]');
     const errorElement = document.getElementById("email-error");
@@ -7801,42 +7802,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
-//Funktion zur Überprüfung des E-Mail-Eingabefeldes im Modaldialog auf korrekte E-Mail-Adresse
-document.addEventListener("DOMContentLoaded", function () {
-    const emailInput = document.querySelector('input[name="modal-email"]');
-    const errorElement = document.getElementById("modal-email-error");
-
-    emailInput.addEventListener("blur", function () {
-        const emailValue = emailInput.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailRegex.test(emailValue) && emailValue !== "") {
-            console.log("Ungültige E-Mail:", emailValue); // Debug
-            errorElement.style.display = "inline"; // Fehlermeldung anzeigen
-            emailInput.style.borderColor = "red"; // Rote Umrandung
-        } else {
-            console.log("Gültige E-Mail oder leer"); // Debug
-            errorElement.style.display = "none"; // Fehlermeldung ausblenden
-            emailInput.style.borderColor = ""; // Standard-Umrandung
-        }
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
