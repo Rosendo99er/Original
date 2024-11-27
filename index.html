@@ -7282,18 +7282,24 @@ async function openConfirmationModal() {
 
 // Container A und B abrufen
 const containerA = document.querySelector('#factoring-section-container');
-console.log('Container A:', containerA);
 const containerB = document.querySelector('#contact-form-section-container');
-console.log('Container B:', containerB);
 
-// Prüfen, welcher Container existiert
-const activeContainer = containerA || containerB;
-console.log('Active Container:', activeContainer);
 
-if (!activeContainer) {
-    console.error("Keiner der Container existiert.");
+let activeContainer;
+
+if (containerA && getComputedStyle(containerA).display !== 'none') {
+    activeContainer = containerA;
+} else if (containerB && getComputedStyle(containerB).display !== 'none') {
+    activeContainer = containerB;
+} else {
+    activeContainer = null;
+    console.error("Keiner der Container ist aktiv.");
     return; // Funktion abbrechen, wenn kein Container existiert
 }
+
+console.log('Active Container:', activeContainer);
+
+
 
 // Werte abrufen und auf Standardwerte zurückfallen, falls Felder fehlen
 const rechnungsstellerValue = activeContainer.querySelector('.rechnungssteller')?.value || '';
