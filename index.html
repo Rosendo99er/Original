@@ -7280,39 +7280,99 @@ async function getTranslatedChatHistoryForEmail() {
 
 async function openConfirmationModal() {
 
-    // Container A und B abrufen
-    const containerA = document.querySelector('#factoring-section-container');
-    const containerB = document.querySelector('#contact-form-section-container');
+// Container A und B abrufen
+const containerA = document.querySelector('#factoring-section-container');
+console.log('Container A:', containerA);
+const containerB = document.querySelector('#contact-form-section-container');
+console.log('Container B:', containerB);
 
-    // Prüfen, welcher Container existiert
-    const activeContainer = containerA || containerB;
+// Prüfen, welcher Container existiert
+const activeContainer = containerA || containerB;
+console.log('Active Container:', activeContainer);
 
-    if (!activeContainer) {
-        console.error("Keiner der Container existiert.");
-        return; // Funktion abbrechen, wenn kein Container existiert
-    }
+if (!activeContainer) {
+    console.error("Keiner der Container existiert.");
+    return; // Funktion abbrechen, wenn kein Container existiert
+}
+
+// Werte abrufen und auf Standardwerte zurückfallen, falls Felder fehlen
+const rechnungsstellerValue = activeContainer.querySelector('.rechnungssteller')?.value || '';
+console.log('Rechnungssteller Value:', rechnungsstellerValue);
+const rechnungsnummerValue = activeContainer.querySelector('.rechnungsnummer')?.value || '';
+console.log('Rechnungsnummer Value:', rechnungsnummerValue);
+const aktennummerValue = activeContainer.querySelector('.contact-form-aktennummer')?.value || '';
+console.log('Aktennummer Value:', aktennummerValue);
+const nameValue = activeContainer.querySelector('.contact-form-name')?.value || '';
+console.log('Name Value:', nameValue);
+const emailValue = activeContainer.querySelector('.contact-form-email')?.value || '';
+console.log('Email Value:', emailValue);
+const modalEmailField = document.querySelector('input[name="modalEmail"]');
+console.log('Modal Email Field:', modalEmailField);
+if (modalEmailField) {
+    modalEmailField.value = emailValue; // E-Mail-Wert setzen
+    console.log('Modal Email Field Value Set:', modalEmailField.value);
+}
+    
+const messageValue = activeContainer.querySelector('.contact-form-nachricht')?.value || '';
+console.log('Message Value:', messageValue);
+
+// Felder im Modal befüllen
+const modalRechnungssteller = document.getElementById("modalRechnungssteller");
+console.log('Modal Rechnungssteller:', modalRechnungssteller);
+if (modalRechnungssteller) {
+    modalRechnungssteller.innerText = rechnungsstellerValue;
+    console.log('Rechnungssteller Value Set:', rechnungsstellerValue);
+}
+
+const modalRechnungsnummer = document.getElementById("modalRechnungsnummer");
+console.log('Modal Rechnungsnummer:', modalRechnungsnummer);
+if (modalRechnungsnummer) {
+    modalRechnungsnummer.innerText = rechnungsnummerValue;
+    console.log('Rechnungsnummer Value Set:', rechnungsnummerValue);
+}
+
+const modalAktennummer = document.getElementById("modalAktennummer");
+console.log('Modal Aktennummer:', modalAktennummer);
+if (modalAktennummer) {
+    modalAktennummer.innerText = aktennummerValue;
+    console.log('Aktennummer Value Set:', aktennummerValue);
+}
+
+const modalName = document.getElementById("modalName");
+console.log('Modal Name:', modalName);
+if (modalName) {
+    modalName.innerText = nameValue;
+    console.log('Name Value Set:', nameValue);
+}
+
+const modalMessage = document.getElementById("modalMessage");
+console.log('Modal Message:', modalMessage);
+if (modalMessage) {
+    modalMessage.value = messageValue;
+    console.log('Message Value Set:', messageValue);
+}
+}
 
 
-    // Werte abrufen und auf Standardwerte zurückfallen, falls Felder fehlen
-    const rechnungsstellerValue = activeContainer.querySelector('.rechnungssteller')?.value || '';
-    const rechnungsnummerValue = activeContainer.querySelector('.rechnungsnummer')?.value || '';
-    const aktennummerValue = activeContainer.querySelector('.contact-form-aktennummer')?.value || '';
-    const nameValue = activeContainer.querySelector('.contact-form-name')?.value || '';
-    const emailValue = activeContainer.querySelector('.contact-form-email')?.value || '';
-    const modalEmailField = document.querySelector('input[name="modalEmail"]');
-    if (modalEmailField) {
-        modalEmailField.value = emailValue; // E-Mail-Wert setzen
-    }
-        
-    const messageValue = activeContainer.querySelector('.contact-form-nachricht')?.value || '';
 
-    // Felder im Modal befüllen
-    document.getElementById("modalRechnungssteller").innerText = rechnungsstellerValue;
-    document.getElementById("modalRechnungsnummer").innerText = rechnungsnummerValue;
-    document.getElementById("modalAktennummer").innerText = aktennummerValue;
-    document.getElementById("modalName").innerText = nameValue;
-    //document.getElementById("modalEmail").innerText = emailValue;
-    document.getElementById("modalMessage").value = messageValue;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Die übersetzte Chat-Historie abrufen
