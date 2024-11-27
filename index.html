@@ -7299,6 +7299,11 @@ async function openConfirmationModal() {
     const aktennummerValue = activeContainer.querySelector('.contact-form-aktennummer')?.value || '';
     const nameValue = activeContainer.querySelector('.contact-form-name')?.value || '';
     const emailValue = activeContainer.querySelector('.contact-form-email')?.value || '';
+    const modalEmailField = document.querySelector('input[name="modalEmail"]');
+    if (modalEmailField) {
+        modalEmailField.value = emailValue; // E-Mail-Wert setzen
+    }
+        
     const messageValue = activeContainer.querySelector('.contact-form-nachricht')?.value || '';
 
     // Felder im Modal befüllen
@@ -7306,7 +7311,7 @@ async function openConfirmationModal() {
     document.getElementById("modalRechnungsnummer").innerText = rechnungsnummerValue;
     document.getElementById("modalAktennummer").innerText = aktennummerValue;
     document.getElementById("modalName").innerText = nameValue;
-    document.getElementById("modalEmail").innerText = emailValue;
+    //document.getElementById("modalEmail").innerText = emailValue;
     document.getElementById("modalMessage").value = messageValue;
 
 
