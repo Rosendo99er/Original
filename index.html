@@ -65,7 +65,7 @@
   --tertiary-border-color:  var(--secondary-company-color);
 
   --form-and-field-background-color: var(--primary-company-color-light);
-  --form-and-field-background-color-focus: var(--secondary-company-color-light);
+  --form-and-field-background-color-focus: var(--primary-company-color-light);
 
   --form-and-field-border-color: var(--primary-company-color);
   --form-and-field-border-color-focus: var(--secondary-company-color);
@@ -82,7 +82,7 @@
   --primary-button-color: var(--primary-company-color);
   --secondary-button-color: var(--secondary-company-color);
 
-  --primary-loader-color: var(--primary-company-color-light);
+  --primary-loader-color: var(--secondary-company-color);
   --secondary-loader-color: var(--primary-company-color);
   
 --theme-value-1-de: "Wer oder was ist Chati?";
@@ -217,7 +217,7 @@
 }
 ########################*/
 
-/* ########################customer########################*/
+/* ########################customer
 
 :root {
 
@@ -268,7 +268,7 @@
   --secondary-border-color: var(--primary-company-color);
   --tertiary-border-color:  var(--secondary-company-color);
 
-  --form-and-field-background-color: var(--primary-company-color-light);
+  --form-and-field-background-color: var(--secondary-company-color-light);
   --form-and-field-background-color-focus: var(--secondary-company-color-light);
 
   --form-and-field-border-color: var(--primary-company-color);
@@ -420,13 +420,13 @@
 --theme-value-6-it: "Chi o cosa è ADELTA.FINANZ AG?";
 --theme-text-6-it: "Informazioni su ADELTA.FINANZ";
 }
-  
+########################*/ 
   
   
   
 
 
-/* ########################customer
+/* ########################customer########################*/
 
 :root {
 
@@ -495,7 +495,7 @@
   --primary-button-color: var(--primary-company-color);
   --secondary-button-color: var(--secondary-company-color);
 
-  --primary-loader-color: var(--primary-company-color-light);
+  --primary-loader-color: var(--secondary-company-color);
   --secondary-loader-color: var(--primary-company-color);
 
 
@@ -630,7 +630,7 @@
   --theme-text-6-it: "Servizio Consumatori";
 
 }
-########################*/
+
 
 
 
@@ -653,7 +653,7 @@
 }
 
 
-/* ++++++++++++++++++++++++ Anwendung Chati free ++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++ Anwendung Chati free ++++++++++++++++++++++++ */
 
 :root {
 --rules-context: ChatbotIntern; 
@@ -1026,7 +1026,7 @@ html, body {
 
 
 
-  ++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
+  /*++++++++++++++++++++++++ ENDE Anwendung Chati free ++++++++++++++++++++++++ */
 
 
 
@@ -1950,10 +1950,10 @@ padding-left: 0px;
 
 
 
-  /* ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
+   /* ++++++++++++++++++++++++ ENDE Anwendung Chatbot mit Kontaktformular ++++++++++++++++++++++++ 
 
 
-/* ++++++++++++++++++++++++ Anwendung Chatbot für Factoring ++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++ Anwendung Chatbot für Factoring ++++++++++++++++++++++++ 
 
 :root {
 --rules-context: ChatbotContactFactoring; 
@@ -2828,7 +2828,7 @@ padding-left: 0px;
 
 
 
- /* ++++++++++++++++++++++++ ENDE Anwendung Chatbot für Factoring ++++++++++++++++++++++++ */
+  ++++++++++++++++++++++++ ENDE Anwendung Chatbot für Factoring ++++++++++++++++++++++++ */
 
 
 
@@ -7837,12 +7837,25 @@ document.addEventListener('click', function(event) {
         // Nachricht in das Eingabefeld einfügen und senden
         const inputField = document.getElementById('chatbot-input');
         inputField.value = message; // Nachricht ins Feld einfügen
+        insertCodeToUserMessage(target.id);
         deleteLink();
         sendMessage(); // Vorhandene Sende-Funktion aufrufen
     }
 });
 
+function insertCodeToUserMessage(id) {
+    // Unsichtbares Element erstellen
+    const hiddenElement = document.createElement('span');
+    hiddenElement.id = `hidden-${id}`; // Eindeutige ID für das unsichtbare Element
+    hiddenElement.style.display = 'none'; // Unsichtbar machen
+    hiddenElement.textContent = id; // ID des Links als Textinhalt
 
+    // Das unsichtbare Element in das Dokument einfügen (z. B. im Chatbot-Bereich)
+    const chatbotContainer = document.getElementById('chatbot-container');
+    if (chatbotContainer) {
+        chatbotContainer.appendChild(hiddenElement);
+    }
+}
 
 
 
