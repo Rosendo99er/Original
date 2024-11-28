@@ -7833,29 +7833,23 @@ document.addEventListener('click', function(event) {
     if (target.classList.contains('suggested-link')) {
         event.preventDefault(); // Standard-Link-Verhalten verhindern
         const message = target.textContent.trim(); // Text des Links lesen
+        const hiddenCode = target.id;
 
         // Nachricht in das Eingabefeld einfügen und senden
         const inputField = document.getElementById('chatbot-input');
         inputField.value = message; // Nachricht ins Feld einfügen
-        insertCodeToUserMessage(target.id);
+        saveHiddenCodeToHistory(hiddenCode)
         deleteLink();
         sendMessage(); // Vorhandene Sende-Funktion aufrufen
     }
 });
 
-function insertCodeToUserMessage(id) {
-    // Unsichtbares Element erstellen
-    const hiddenElement = document.createElement('span');
-    hiddenElement.id = `hidden-${id}`; // Eindeutige ID für das unsichtbare Element
-    hiddenElement.style.display = 'none'; // Unsichtbar machen
-    hiddenElement.textContent = id; // ID des Links als Textinhalt
-
-    // Das unsichtbare Element in das Dokument einfügen (z. B. im Chatbot-Bereich)
-    const chatbotContainer = document.getElementById('chatbot-container');
-    if (chatbotContainer) {
-        chatbotContainer.appendChild(hiddenElement);
-    }
+// Neue Funktion für das Speichern der ID
+function saveHiddenCodeToHistory(code) {
+    conversationHistory.push({ type: 'user-message', content: code });
 }
+
+
 
 
 
