@@ -3924,18 +3924,19 @@ outline: none !important;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  background-color: rgba(255, 255, 255, 0.8 );
 }
 
 #loader {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .loader-dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: var(--primary-loader-color);
   border-radius: 50%;
   animation: wave 1.5s infinite ease-in-out;
@@ -3974,7 +3975,7 @@ outline: none !important;
 
 #loader-text {
   font-family: var(--company-font-family);
-  font-size: var(--primary-font-size);
+  font-size: var(--font-size-subtitle);
   color: var(--primary-loader-color);
   border-radius: var(--primary-border-radius);
   display: none; 
@@ -5215,7 +5216,7 @@ textarea:-webkit-autofill {
           <div class="loader-dot"></div>
         </div>
         <div id="loader-text">
-          Einen kurzen Augenblick bitte. Ihre Anfrage wird bearbeitet.
+          schreibt...
         </div>
       </div>
 
