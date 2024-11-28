@@ -7469,12 +7469,7 @@ console.log('Name Value:', nameValue);
 const emailValue = activeContainer.querySelector('.contact-form-email')?.value || '';
 console.log('Email Value:', emailValue);
 
-const modalEmailField = document.querySelector('input[name="modalEmail"]');
-console.log('Modal Email Field:', modalEmailField);
-if (modalEmailField) {
-    modalEmailField.value = emailValue; // E-Mail-Wert setzen
-    console.log('Modal Email Field Value Set:', modalEmailField.value);
-}
+
     
 const messageValue = activeContainer.querySelector('.contact-form-nachricht')?.value || '';
 console.log('Message Value:', messageValue);
@@ -7501,12 +7496,21 @@ if (modalAktennummer) {
     console.log('Aktennummer Value Set:', aktennummerValue);
 }
 
-const modalName = document.getElementById("modalName");
+
+const modalName = document.querySelector('input[name="modalName"]');
 console.log('Modal Name:', modalName);
 if (modalName) {
-    modalName.innerText = nameValue;
+    modalName.value = nameValue;
     console.log('Name Value Set:', nameValue);
 }
+
+const modalEmailField = document.querySelector('input[name="modalEmail"]');
+console.log('Modal Email Field:', modalEmailField);
+if (modalEmailField) {
+    modalEmailField.value = emailValue; // E-Mail-Wert setzen
+    console.log('Modal Email Field Value Set:', modalEmailField.value);
+}
+
 
 const modalMessage = document.getElementById("modalMessage");
 console.log('Modal Message:', modalMessage);
