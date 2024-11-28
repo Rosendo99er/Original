@@ -7846,7 +7846,7 @@ document.addEventListener('click', function(event) {
 
 // Neue Funktion für das Speichern der ID
 function saveHiddenCodeToHistory(code) {
-    conversationHistory.push({ type: 'user-message', content: code });
+    conversationHistory.push({ role: 'user', content: code });
 }
 
 
