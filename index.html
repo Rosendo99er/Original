@@ -8017,6 +8017,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//Funktion zur Überprüfung des E-Mail-Eingabefeldes im Modaldialog auf korrekte E-Mail-Adresse
+document.addEventListener("DOMContentLoaded", function () {
+    const emailInput = document.querySelector('input[name="modal-email"]');
+    const errorElement = document.getElementById("modal-email-error");
+
+    emailInput.addEventListener("blur", function () {
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(emailValue) && emailValue !== "") {
+            console.log("Ungültige E-Mail:", emailValue); // Debug
+            errorElement.style.display = "inline"; // Fehlermeldung anzeigen
+            emailInput.style.borderColor = "red"; // Rote Umrandung
+        } else {
+            console.log("Gültige E-Mail oder leer"); // Debug
+            errorElement.style.display = "none"; // Fehlermeldung ausblenden
+            emailInput.style.borderColor = ""; // Standard-Umrandung
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
