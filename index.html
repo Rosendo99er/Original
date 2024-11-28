@@ -33,7 +33,7 @@
   --primary-company-color: #3FA6C7;
   --secondary-company-color: #D87A92;
   --tertiary-company-color: #707B84;
-  --tertiary-company-color-light: #F1F2F3;
+  --primary-company-color-light: #F1F2F3;
   --website-standard-font-color-light: #fff;
   --website-standard-font-color-dark: #000;
   --primary-company-border-radius: 8px;
@@ -201,7 +201,7 @@
   --primary-company-color: #154D7F;
   --secondary-company-color: #0085CD;
   --tertiary-company-color: #939393;
-  --tertiary-company-color-light: #EAEAEA;
+  --primary-company-color-light: #EAEAEA;
   --website-standard-font-color-light: #fff;
   --website-standard-font-color-dark: #000;
   --primary-company-border-radius: 8px;
@@ -359,37 +359,79 @@
 :root {
 
   --rules-customer: regis24; 
-  --company-main-url: "https://www.regis24.de/.com/";
-  --company-logo-url: url("https://www.regis24.de/wp-content/uploads/2020/12/website_logo_header_5b.png");
-  --company-logo-width: 300px;
-  --company-logo-height: 80px;
-  --media-company-logo-width: 300px;
-  --media-company-logo-height: 40px;
-  --company-logo-background: var(--secondary-background-color);
   --company-name: "Regis24 GmbH";
   --company-street: "Alte Rhinstr. 16";
   --company-city: "12681 Berlin";
   --company-email: "stephan.vila@cream-collection.de";
-  --primary-company-color: #002f37;
-  --secondary-company-color: #FF5000;
-  --tertiary-company-color: #646464;
-  --tertiary-company-color-light: #FEFFFD;
-  --website-standard-font-color-light: #FEFFFD;
-  --website-standard-font-color-dark: #002F37;
-  --primary-company-border-radius: 8px;
+  
+  --company-main-url: "https://www.regis24.de";
+  --company-logo-url: url("https://www.regis24.de/wp-content/uploads/2020/12/website_logo_header_5b.png");
+  --clara-image-url: url("https://rosendo99er.github.io/images/Chat bearbeitet.png");
+  
+  --company-logo-width: 300px;
+  --company-logo-height: 80px;
+  --media-company-logo-width: 300px;
+  --media-company-logo-height: 40px;
+  
   --company-font-family: 'Quicksand', sans-serif;
   --company-font-weight: 300;
+  
+  --primary-company-border-radius: 8px;
   --company-font-size-title: 27px;
   --company-font-size-subtitle: 18px;
   --company-font-size-text: 18px;
-  --company-font-size-finePrint: 18px;
+  --company-font-size-fineprint: 18px;
   --company-font-size-button: 18px;
-  --form-and-field-company-color: #EFF3F6;
-  --form-and-field-border-company-color: #646464;
-  --primary-background-company-color: #EFF3F6;
+
+    
+  --primary-company-color: #002f37;
+  --secondary-company-color: #FF5000;
+  --tertiary-company-color: #646464;
+  --primary-company-color-dark: #000;
+  --secondary-company-color-dark: #002f37;
+  --primary-company-color-light: #EFF3F6;
+  --secondary-company-color-light: #FEFFFD;
   --modal-background: rgba(0, 0, 0, 0.5);
-  --clara-image-url: url("https://rosendo99er.github.io/images/Chat bearbeitet.png");
+
   
+
+  --body-background-color: var(--primary-company-color-light);
+  --primary-background-company-color: var(--primary-company-color-light);
+  --secondary-background-company-color: var(--secondary-company-color-light);
+  --company-logo-background: var(--secondary-company-color-light);
+
+
+  --primary-background-color: var(--primary-company-color-light);
+  --secondary-background-color: var(--secondary-company-color-light);
+  --special-background-color: var(--primary-company-color);
+
+  --primary-border-color:   var(--tertiary-company-color);
+  --secondary-border-color: var(--primary-company-color);
+  --tertiary-border-color:  var(--secondary-company-color);
+
+  --form-and-field-background-color: var(--primary-company-color-light);
+  --form-and-field-background-color-focus: var(--secondary-company-color-light);
+
+  --form-and-field-border-color: var(--primary-company-color);
+  --form-and-field-border-color-focus: var(--secondary-company-color);
+  
+  
+  --primary-font-color: var(--primary-company-color);
+  --secondary-font-color: var(--secondary-company-color);
+  --tertiary-font-color:  var(--primary-company-color-light);
+  --website-standard-font-color-dark: var(--secondary-company-color-dark);
+  --placeholder-standard-font-color: var(--secondary-company-color);
+
+  --primary-link-color: var(--primary-company-color);
+  --secondary-link-color: var(--secondary-company-color);
+
+  --primary-button-color: var(--primary-company-color);
+  --secondary-button-color: var(--secondary-company-color);
+
+  --primary-loader-color: var(--primary-company-color-light);
+  --secondary-loader-color: var(--primary-company-color);
+
+
   --theme-value-1-de: "Wer oder was ist die Regis 24 GmbH?";
   --theme-text-1-de: "Über Regis 24";
   --theme-value-2-de: "Welche Produkte und Leistungen bietet Regis 24 an?";
@@ -520,37 +562,14 @@
   --theme-value-6-it: "Cosa devono sapere i consumatori su Regis 24? A chi posso rivolgermi per domande? Come posso ottenere la mia autodichiarazione?";
   --theme-text-6-it: "Servizio Consumatori";
 
+}
 
 
 
 
-  --primary-link-color: var(--primary-company-color);
-  --secondary-link-color: var(--secondary-company-color);
-
-
-  --body-background-color: var(--primary-background-company-color);
-
-  --primary-border-color:   var(--form-and-field-border-company-color);
-  --secondary-border-color: var(--primary-company-color);
-  --tertiary-border-color:  var(--tertiary-company-color);
-
-
-  --primary-font-color: var(--primary-company-color);
-  --secondary-font-color: var(--secondary-company-color);
-  --tertiary-font-color:  var(--website-standard-font-color-light);
-  --tertiary-font-color-dark: var(--website-standard-font-color-dark);
- 
-
-  --primary-button-color: var(--primary-company-color);
-  --secondary-button-color: var(--secondary-company-color);
-
-  --primary-loader-color: var(--tertiary-company-color-light);
-  --secondary-loader-color: var(--primary-company-color);
-
-  --primary-background-color: var(--primary-background-company-color);
-  --secondary-background-color: var(--tertiary-company-color-light);
-  --special-background-color: var(--primary-company-color);
-
+/* Allgemeine roots - Kunden unabhängig! */
+:root {
+  
   --primary-border-radius: var(--primary-company-border-radius);
 
   --font-size-title: var(--company-font-size-title);
@@ -564,7 +583,6 @@
   --media-font-size-text: 16px;
   --media-font-size-fineprint: 12px;
   --media-font-size-button: 16px;
-
 }
 
 
@@ -1259,7 +1277,8 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
   margin-bottom: 10px;
   margin-top: 10px;
@@ -1274,24 +1293,19 @@ html, body {
   position: relative;
 }
 
-
-.contact-form-aktennummer,
-.contact-form-aktennummer:valid
-{
-  background-color: var(--primary-background-company-color);
-}
-
 .contact-form-aktennummer:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
+    background-color: var(--form-and-field-background-color-focus);
+    border: 2px solid var(--form-and-field-border-color-focus) !important;
     border-radius: var(--primary-border-radius) !important;    
+    z-index: 50;
+    outline: none;
 }
 
 
 
 
 .contact-form-aktennummer::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   font-weight: normal;
@@ -1308,7 +1322,8 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
   margin-bottom: 10px;
   margin-top: 10px;
@@ -1323,23 +1338,17 @@ html, body {
   position: relative;
 }
 
-.contact-form-name,
-.contact-form-name:valid
-{
-  background-color: var(--primary-background-company-color);
-}
-
 .contact-form-name:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
-    border-radius: var(--primary-border-radius) !important;    
+  background-color: var(--form-and-field-background-color-focus);
+  border: 2px solid var(--form-and-field-border-color-focus) !important;
+  border-radius: var(--primary-border-radius) !important;    
+  z-index: 50;
+  outline: none;
 }
-
-
 
 
 .contact-form-name::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   font-weight: normal;
@@ -1354,9 +1363,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 0px;
@@ -1370,20 +1379,16 @@ html, body {
   position: relative;
 }
 
-.contact-form-email,
-.contact-form-email:valid
-{
-  background-color: var(--primary-background-company-color);
-}
-
 .contact-form-email:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
-    border-radius: var(--primary-border-radius) !important;    
+  background-color: var(--form-and-field-background-color-focus);
+  border: 2px solid var(--form-and-field-border-color-focus) !important;
+  border-radius: var(--primary-border-radius) !important;    
+  z-index: 50;
+  outline: none;   
 }
 
 .contact-form-email::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   font-weight: normal;
@@ -1401,9 +1406,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 0px;
@@ -1417,20 +1422,16 @@ html, body {
   position: relative;
 }
 
-.modal-contact-form-email,
-.modal-contact-form-email:valid
-{
-  background-color: var(--primary-background-company-color);
-}
-
 .modal-contact-form-email:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
-    border-radius: var(--primary-border-radius) !important;    
+  background-color: var(--form-and-field-background-color-focus);
+  border: 2px solid var(--form-and-field-border-color-focus) !important;
+  border-radius: var(--primary-border-radius) !important;    
+  z-index: 50;
+  outline: none; 
 }
 
 .modal-contact-form-email::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   font-weight: normal;
@@ -1454,9 +1455,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 0px;
@@ -1479,9 +1480,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 0px;
@@ -1494,42 +1495,28 @@ html, body {
   max-height: calc(1.5em * 6 + 20px);
 }
 
-
-
-.contact-form-nachricht,
-.contact-form-nachricht:valid
-{
-  background-color: var(--primary-background-company-color);
-}
-
 .contact-form-nachricht:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
-    border-radius: var(--primary-border-radius) !important;
+  background-color: var(--form-and-field-background-color-focus);
+  border: 2px solid var(--form-and-field-border-color-focus) !important;
+  border-radius: var(--primary-border-radius) !important;    
+  z-index: 50;
+  outline: none;
 }
 
-
-.modalMessage,
-.modalMessage:valid
-{
-  background-color: var(--primary-background-company-color);
-}
 
 .modalMessage:focus {
-    background-color: var(--primary-background-company-color);
-    border: 2px solid var(--secondary-border-color) !important;
-    border-radius: var(--primary-border-radius) !important;
+  background-color: var(--form-and-field-background-color-focus);
+  border: 2px solid var(--form-and-field-border-color-focus) !important;
+  border-radius: var(--primary-border-radius) !important;    
+  z-index: 50;
+  outline: none;
 }
-
-
-
-
 
 
 
 
 .contact-form-nachricht::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   font-weight: normal;
@@ -1539,12 +1526,11 @@ html, body {
 
 
 #modalMessage::placeholder {
-  color: var(--secondary-font-color);
+  color: var(--placeholder-standard-font-color);
   font-size: var(--font-size-text);
   font-style: italic;
   padding-left: 0px;
 }
-
 
 
 
@@ -1677,7 +1663,8 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 1px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
   margin-bottom: 5px;
   margin-top: 5px;
@@ -1701,7 +1688,8 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 1px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
   margin-bottom: 5px;
   margin-top: 5px;
@@ -1724,9 +1712,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 1px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 5px;
   margin-top: 5px;
   margin-left: 0px;
@@ -1747,9 +1735,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 1px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 5px;
   margin-top: 5px;
   margin-left: 0px;
@@ -1773,9 +1761,9 @@ html, body {
   font-weight: normal;
   flex: 1;
   padding: 10px 10px 10px 30px;
-  border: 1px solid var(--tertiary-border-color);
+  background-color: var(--form-and-field-background-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
   margin-bottom: 10px;
   margin-top: 5px;
   margin-left: 0px;
@@ -1931,8 +1919,6 @@ padding-left: 0px;
   padding: 0px 9px 0px 8px;
   position: relative;
   }
-
-
 
 }
 
@@ -3437,7 +3423,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   max-height: 500px;
-  border: 2px solid var(--tertiary-border-color);
+  border: 2px solid var(--primary-border-color);
   border-radius: var(--primary-border-radius);
   background-color: var(--primary-background-color);
   display: flex;
@@ -4259,7 +4245,7 @@ body.modal-open {
     z-index: 100000 !important;
     display: flex !important;
     position: fixed !important;
-    background-color: var(--primary-background-color) !important;
+    background-color: var(--secondary-background-color) !important;
     left: 50% !important;
     top: 50% !important;
     width: 90vw !important;
@@ -4428,7 +4414,7 @@ body.modal-open {
     z-index: 100000 !important;
     display: block !important;
     position: fixed !important;
-    background-color: var(--primary-background-color) !important;
+    background-color: var(--secondary-background-color) !important;
     left: 50% !important;
     top: 50% !important;
     width: fit-content; /* Breite passt sich dem Inhalt an */
@@ -4473,7 +4459,7 @@ body.modal-open {
     margin-top: 0px;
     height: auto;
     padding: 24px 30px 20px 30px;
-    background-color: var(--secondary-background-color);
+    background-color: var(--primary-background-color);
     box-sizing: border-box;
     border-top: 0px solid var(--tertiary-border-color);
 }
