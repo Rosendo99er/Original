@@ -286,8 +286,8 @@
   --primary-button-color: var(--primary-company-color);
   --secondary-button-color: var(--secondary-company-color);
 
-  --primary-loader-color: var(--primary-company-color-light);
-  --secondary-loader-color: var(--primary-company-color);
+  --primary-loader-color: var(--secondary-company-color);
+  --secondary-loader-color: var(--primary-company-color-light);
 
  
 --theme-value-1-de: "Bitte zeige mir eine aktuelle Forderungsaufstellung an. Beachte die Formatierungsanweisungen.";
@@ -3975,8 +3975,7 @@ outline: none !important;
 #loader-text {
   font-family: var(--company-font-family);
   font-size: var(--primary-font-size);
-  color: #fff;
-  background-color: var(--primary-company-color);
+  color: var(--primary-loader-color);
   border-radius: var(--primary-border-radius);
   display: none; 
   z-index: 120; 
