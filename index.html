@@ -3038,7 +3038,6 @@ padding-left: 0px;
 #chatbot-messages-gpt .bot-message {
   padding: 0px 0px 20px 0px !important; 
   font-family: var(--company-font-family);
-  background-color: var(--primary-background-color);
   text-align: left;
   color: var(--website-standard-font-color-dark);
   margin-top: 0px !important; 
@@ -3689,7 +3688,6 @@ body.modal-open {
 #chatbot-messages-gpt .bot-message {
   font-family: var(--company-font-family);
   padding: 5px 20px 15px 35px;
-  background-color: var(--primary-background-color);
   text-align: left;
   color: var(--website-standard-font-color-dark);
   margin-top: 0; /* Kleinere Abstände */
@@ -4315,7 +4313,10 @@ outline: none !important;
   max-height: calc(1.5em * 6 + 20px);
 }
 
-
+.modal-standard-inner-large-content .email-nachricht:focus {
+  border: 2px solid var(--tertiary-border-color);
+  background-color: var(--secondary-background-color);
+}
 
 
 
