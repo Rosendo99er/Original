@@ -4726,8 +4726,11 @@ textarea:-webkit-autofill {
           <span>Aktennummer: </span><span id="modalAktennummer"></span></p><br>
           <span>Rechnungssteller: </span><span id="modalRechnungssteller"></span><br>
           <span>Rechnungsnummer: </span><span id="modalRechnungsnummer"></span></p><br>
+        
+        
         <p><strong>Ihr Name:</strong><br>
-        <span id="modalName"></span></p><br>
+        <input id="modalName" class="modal-contact-form-email" name="modalName" placeholder="Ihr Name" maxlength="500" autocomplete="name" required /><br>
+
 
         <p><strong>Ihre E-Mail-Adresse:</strong><br>
         <input type="email" class="modal-contact-form-email" name="modalEmail" placeholder="Ihre E-Mail-Adresse" maxlength="500" autocomplete="email" required /><br>
@@ -7453,14 +7456,19 @@ console.log('Active Container:', activeContainer);
 // Werte abrufen und auf Standardwerte zurückfallen, falls Felder fehlen
 const rechnungsstellerValue = activeContainer.querySelector('.rechnungssteller')?.value || '';
 console.log('Rechnungssteller Value:', rechnungsstellerValue);
+
 const rechnungsnummerValue = activeContainer.querySelector('.rechnungsnummer')?.value || '';
 console.log('Rechnungsnummer Value:', rechnungsnummerValue);
+
 const aktennummerValue = activeContainer.querySelector('.contact-form-aktennummer')?.value || '';
 console.log('Aktennummer Value:', aktennummerValue);
+
 const nameValue = activeContainer.querySelector('.contact-form-name')?.value || '';
 console.log('Name Value:', nameValue);
+
 const emailValue = activeContainer.querySelector('.contact-form-email')?.value || '';
 console.log('Email Value:', emailValue);
+
 const modalEmailField = document.querySelector('input[name="modalEmail"]');
 console.log('Modal Email Field:', modalEmailField);
 if (modalEmailField) {
