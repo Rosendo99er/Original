@@ -1541,29 +1541,6 @@ html, body {
 
 
 
-
-#modalMessage {
-  font-family: var(--company-font-family);
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  background-color: var(--form-and-field-background-color);
-  border: 2px solid var(--form-and-field-border-color);
-  border-radius: var(--primary-border-radius);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none; 
-  box-sizing: border-box;
-  overflow: auto;
-  white-space: normal;
-  max-height: calc(1.5em * 6 + 20px);
-}
-
 .contact-form-nachricht:focus {
   background-color: var(--form-and-field-background-color-focus);
   border: 2px solid var(--form-and-field-border-color-focus) !important;
@@ -1571,16 +1548,6 @@ html, body {
   z-index: 50;
   outline: none;
 }
-
-
-.modalMessage:focus {
-  background-color: var(--form-and-field-background-color-focus);
-  border: 2px solid var(--form-and-field-border-color-focus) !important;
-  border-radius: var(--primary-border-radius) !important;    
-  z-index: 50;
-  outline: none;
-}
-
 
 
 
@@ -1591,18 +1558,6 @@ html, body {
   font-weight: normal;
   padding-left: 0px;
 }
-
-
-
-#modalMessage::placeholder {
-  color: var(--placeholder-standard-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
-
-
-
 
 
 
@@ -2434,30 +2389,6 @@ html, body {
 }
 
 
-
-
-#modalMessage {
-  font-family: var(--company-font-family);
-  font-size: var(--font-size-text);
-  color: var(--primary-font-color);
-  font-weight: normal;
-  flex: 1;
-  padding: 10px 10px 10px 30px;
-  background-color: var(--form-and-field-background-color);
-  border: 2px solid var(--form-and-field-border-color);
-  border-radius: var(--primary-border-radius);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  resize: none; 
-  box-sizing: border-box;
-  overflow: auto;
-  white-space: normal;
-  max-height: calc(1.5em * 6 + 20px);
-}
-
 .contact-form-nachricht:focus {
   background-color: var(--form-and-field-background-color-focus);
   border: 2px solid var(--form-and-field-border-color-focus) !important;
@@ -2466,13 +2397,7 @@ html, body {
   outline: none;
 }
 
-.modalMessage:focus {
-  background-color: var(--form-and-field-background-color-focus);
-  border: 2px solid var(--form-and-field-border-color-focus) !important;
-  border-radius: var(--primary-border-radius) !important;    
-  z-index: 50;
-  outline: none;
-}
+
 
 
 
@@ -2484,14 +2409,6 @@ html, body {
   padding-left: 0px;
 }
 
-
-
-#modalMessage::placeholder {
-  color: var(--secondary-font-color);
-  font-size: var(--font-size-text);
-  font-style: italic;
-  padding-left: 0px;
-}
 
 
 #contact-form-container {
@@ -4118,15 +4035,15 @@ outline: none !important;
 
 
 
-.modal-standard-inner-large-content .email-nachricht {
+.modal-contact-form-nachricht {
   font-family: var(--company-font-family);
   font-size: var(--font-size-text);
   color: var(--primary-font-color);
   font-weight: normal;
   padding: 10px 10px 10px 30px;
-  border: 0px solid var(--tertiary-border-color);
+  border: 2px solid var(--form-and-field-border-color);
   border-radius: var(--primary-border-radius);
-  background-color: var(--primary-background-color);
+  background-color: var(--form-and-field-background-color);
   margin-bottom: 10px;
   margin-top: 10px;
   margin-left: 0px;
@@ -4140,12 +4057,20 @@ outline: none !important;
   max-height: calc(1.5em * 6 + 20px);
 }
 
-.modal-standard-inner-large-content .email-nachricht:focus {
+.modal-contact-form-nachricht:focus {
   background-color: var(--form-and-field-background-color-focus);
   border: 2px solid var(--form-and-field-border-color-focus) !important;
   border-radius: var(--primary-border-radius) !important;    
   z-index: 50;
   outline: none; 
+}
+
+.modal-contact-form-nachricht::placeholder {
+  color: var(--secondary-font-color);
+  font-size: var(--font-size-text);
+  font-style: italic;
+  font-weight: normal;
+  padding-left: 0px;
 }
 
 
@@ -4553,7 +4478,7 @@ textarea:-webkit-autofill {
         <input type="email" class="modal-contact-form-email" name="modalEmail" placeholder="Ihre E-Mail-Adresse" maxlength="500" autocomplete="email" required /><br>
         <span id="modal-email-error" style="display: none; color: red; font-size: 0.9em;">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span></p><br>
         <p><strong>Ihre Nachricht:</strong></p>
-        <textarea id="modalMessage" class="email-nachricht" style="white-space:pre-wrap" name="Nachricht" rows="4" placeholder="Ihr Anliegen / Ihre Nachricht" maxlength="2000"></textarea>
+        <textarea id="modalMessage" class="modal-contact-form-nachricht" style="white-space:pre-wrap" name="Nachricht" rows="4" placeholder="Ihr Anliegen / Ihre Nachricht" maxlength="2000"></textarea>
         <p><strong><br>Übersetzte Chat-Historie:</strong></p><br>
         <div id="translated-chat-history" style="white-space:pre-wrap">
         </div>
@@ -5425,7 +5350,7 @@ const textTranslations = {
         "resetPageText1": "We are glad that we could assist you with this service.",
         "resetPageText2": "Your chat history will be deleted and the message discarded.",
         "inputPlaceholder": "How can I help you?",
-        "loader-text": "Please wait a moment. Your request is being processed.",
+        "loader-text": "typing...",
         "chatHistoryDeleted": "Your chat history will be deleted.",
         "chatHistoryDeletedAndClosed": "Your chat history will be deleted and the chatbot will be closed.",
         "suggestedQuestions": [
@@ -5464,7 +5389,7 @@ const textTranslations = {
         "resetPageText1": "Nos alegra haber podido ayudarle con este servicio.",
         "resetPageText2": "Su historial de chat será eliminado y el mensaje descartado.",
         "inputPlaceholder": "¿Cómo puedo ayudarte?",
-        "loader-text": "Por favor, espera un momento. Estamos procesando tu solicitud.",
+        "loader-text": "escribiendo...",
         "chatHistoryDeleted": "Su historial de chat será eliminado.",
         "chatHistoryDeletedAndClosed": "Su historial de chat será eliminado y el chatbot se cerrará.",
         "suggestedQuestions": [
@@ -5503,7 +5428,7 @@ const textTranslations = {
     "resetPageText1": "Bu hizmetle size yardımcı olabildiğimiz için mutluyuz.",
     "resetPageText2": "Sohbet geçmişiniz silinecek ve mesaj iptal edilecektir.",
     "inputPlaceholder": "Size nasıl yardımcı olabilirim?",
-    "loader-text": "Lütfen bir an bekleyin. Talebiniz işleniyor.",
+    "loader-text": "yazıyor...",
     "chatHistoryDeleted": "Sohbet geçmişiniz silinecek.",
     "chatHistoryDeletedAndClosed": "Sohbet geçmişiniz silinecek ve chatbot kapatılacak.",
     "suggestedQuestions": [
@@ -5542,7 +5467,7 @@ const textTranslations = {
     "resetPageText1": "نحن سعداء لأننا تمكنا من مساعدتك بهذه الخدمة.",
     "resetPageText2": "سيتم حذف سجل المحادثة الخاص بك وسيتم تجاهل الرسالة.",    
     "inputPlaceholder": "كيف يمكنني مساعدتكم؟",
-    "loader-text": "يرجى الانتظار لحظة. يتم معالجة طلبك.",
+    "loader-text": "يكتب...",
     "chatHistoryDeleted": "سيتم حذف سجل المحادثة الخاص بك.",
     "chatHistoryDeletedAndClosed": "سيتم حذف سجل المحادثة الخاص بك وسيتم إغلاق الروبوت.",
     "suggestedQuestions": [
@@ -5582,7 +5507,7 @@ const textTranslations = {
     "resetPageText1": "Мы рады, что смогли помочь вам с этой услугой.",
     "resetPageText2": "История чата будет удалена, а сообщение отменено.",
     "inputPlaceholder": "Чем я могу вам помочь?",
-    "loader-text": "Пожалуйста, подождите немного. Ваш запрос обрабатывается.",
+    "loader-text": "пишет...",
     "chatHistoryDeleted": "История вашего чата будет удалена.",
     "chatHistoryDeletedAndClosed": "История вашего чата будет удалена, и чат-бот будет закрыт.",
     "suggestedQuestions": [
@@ -5623,7 +5548,7 @@ const textTranslations = {
     "resetPageText1": "Cieszymy się, że mogliśmy pomóc Ci w tej usłudze.",
     "resetPageText2": "Historia czatu zostanie usunięta, a wiadomość odrzucona.",
     "inputPlaceholder": "Jak mogę ci pomóc?",
-    "loader-text": "Proszę czekać chwilę. Twoje zapytanie jest przetwarzane.",
+    "loader-text": "pisze...",
     "chatHistoryDeleted": "Twoja historia czatu zostanie usunięta.",
     "chatHistoryDeletedAndClosed": "Twoja historia czatu zostanie usunięta, a chatbot zostanie zamknięty.",
     "suggestedQuestions": [
@@ -5664,7 +5589,7 @@ const textTranslations = {
     "resetPageText1": "Ne bucurăm că v-am putut ajuta cu acest serviciu.",
     "resetPageText2": "Istoricul dvs. de chat va fi șters și mesajul va fi anulat.",
     "inputPlaceholder": "Cum vă pot ajuta?",
-    "loader-text": "Vă rugăm să așteptați un moment. Solicitarea dvs. este în curs de procesare.",
+    "loader-text": "scrie...",
     "chatHistoryDeleted": "Istoricul conversațiilor dvs. va fi șters.",
     "chatHistoryDeletedAndClosed": "Istoricul conversațiilor dvs. va fi șters, iar chatbot-ul va fi închis.",
     "suggestedQuestions": [
@@ -5704,7 +5629,7 @@ const textTranslations = {
     "resetPageText1": "Χαιρόμαστε που μπορέσαμε να σας βοηθήσουμε με αυτή την υπηρεσία.",
     "resetPageText2": "Το ιστορικό συνομιλιών σας θα διαγραφεί και το μήνυμα θα απορριφθεί.",
     "inputPlaceholder": "Πώς μπορώ να σας βοηθήσω;",
-    "loader-text": "Παρακαλώ περιμένετε λίγο. Το αίτημά σας επεξεργάζεται.",
+    "loader-text": "γράφει...",
     "chatHistoryDeleted": "Το ιστορικό συνομιλιών σας θα διαγραφεί.",
     "chatHistoryDeletedAndClosed": "Το ιστορικό συνομιλιών σας θα διαγραφεί και το chatbot θα κλείσει.",
     "suggestedQuestions": [
@@ -5743,7 +5668,7 @@ const textTranslations = {
     "resetPageText1": "Siamo felici di aver potuto aiutarvi con questo servizio.",
     "resetPageText2": "La cronologia della chat verrà cancellata e il messaggio verrà eliminato.",
     "inputPlaceholder": "Come posso aiutarti?",
-    "loader-text": "Attendere un momento. La tua richiesta è in fase di elaborazione.",
+    "loader-text": "sta scrivendo...",
     "chatHistoryDeleted": "La cronologia della chat verrà eliminata.",
     "chatHistoryDeletedAndClosed": "La cronologia della chat verrà eliminata e il chatbot verrà chiuso.",
     "suggestedQuestions": [
@@ -5755,8 +5680,6 @@ const textTranslations = {
         "attualmente non in uso"
     ]
 },
-
-
 
 };
 
