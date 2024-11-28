@@ -3917,14 +3917,14 @@ outline: none !important;
 #loader-container {
   display: none; /* Standardmäßig ausgeblendet */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.8 );
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--primary-border-radius);
 }
 
 #loader {
@@ -3932,7 +3932,7 @@ outline: none !important;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 .loader-dot {
@@ -3979,7 +3979,6 @@ outline: none !important;
   font-size: var(--font-size-subtitle);
   color: var(--primary-loader-color);
   border-radius: var(--primary-border-radius);
-  background-color: rgba(255, 255, 255, 0.8 );
   display: none; 
   z-index: 120; 
   padding: 10px 20px; 
@@ -3989,49 +3988,6 @@ outline: none !important;
 }
 
 
-
-
-
-
-/*#loader {
-  margin: 0px;
-  padding: 0px;
-  border: 8px solid var(--primary-loader-color);
-  border-top: 8px solid var(--secondary-loader-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
-  display: none;
-  z-index: 120;
-}
-
-
-#loader-text {
-  font-family: var(--company-font-family);
-  font-size: var(--primary-font-size);
-  color: #fff;
-  background-color: var(--primary-company-color);
-  border-radius: var(--primary-border-radius);
-  display: none; 
-  z-index: 120; 
-  padding: 10px 20px; 
-  text-align: center; 
-  max-width: 100%; 
-  margin-top: 15px;
-}
-
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-*/
 
 .modal-standard-inner-large-content .custom-h2 {
     padding: 20px 0px 0px 0px;
@@ -6149,9 +6105,9 @@ async function sendMessage() {
         isWaitingForResponse = false;
 
         // Loader verstecken
-          loaderElement.style.display = 'none';
-          document.getElementById('loader-container').style.display = 'none';
-          document.getElementById('loader-text').style.display = 'none';
+        loaderElement.style.display = 'none';
+        document.getElementById('loader-container').style.display = 'none';
+        document.getElementById('loader-text').style.display = 'none';
     } finally {
         // Immer ausführen: Eingabefeld leeren und Cursor positionieren
         inputElement.value = '';
