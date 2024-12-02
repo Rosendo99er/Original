@@ -4401,8 +4401,24 @@
   
   
   <body>
+ 
+    <div id="refresh-confirmation-modal" class="modal-standard-background" aria-modal="true">
   
-    
+      <div class="modal-standard-inner">
+  
+        <div class="modal-standard-content">
+          <p id="refresh-page" class="modal-standard-content p">Die Seite wird neu geladen und Ihre Eingaben inkl. der Chat-Historie werden gelöscht.</p>
+        </div>
+  
+        <div class="modal-standard-button-container">
+          <button id="cancel-refresh-button" class="modal-standard-button">Abbrechen</button>
+          <button id="confirm-refresh-button" class="modal-standard-button">OK</button>
+        </div>
+  
+      </div>
+  
+    </div>      
+
     <div id="delete-confirmation-modal" class="modal-standard-background" aria-modal="true">
   
       <div class="modal-standard-inner">
@@ -7850,7 +7866,37 @@
   }
   
   
-  
+let showModalOnRefresh = true; // Steuerung, ob das Modal angezeigt wird
+
+window.addEventListener('beforeunload', (event) => {
+    if (showModalOnRefresh) {
+        event.preventDefault(); // Standard verhindern
+        event.returnValue = ''; // Notwendig für moderne Browser
+        const modal = document.getElementById('refresh-confirmation-modal');
+        if (modal) {
+            modal.style.display = 'block'; // Modal sichtbar machen
+        }
+    }
+});
+
+// Button im Modal, um die Seite wirklich neu zu laden
+document.getElementById('confirm-refresh-button').addEventListener('click', () => {
+    showModalOnRefresh = false; // Überspringe Modal bei tatsächlichem Reload
+    location.reload(); // Seite neuladen
+});
+
+// Optional: Button zum Abbrechen, um Modal zu schließen
+document.getElementById('cancel-refresh-button').addEventListener('click', () => {
+    const modal = document.getElementById('refresh-confirmation-modal');
+    if (modal) {
+        modal.style.display = 'none'; // Modal ausblenden
+    }
+});
+
+
+
+
+
   
   
   //const passwort = prompt("Bitte geben Sie das Passwort ein:");
