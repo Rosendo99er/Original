@@ -7868,41 +7868,47 @@
   
 
 
-let userConfirmed = false; // Status, ob der Nutzer das Neuladen bestätigt hat
+  let userConfirmed = false; // Status, ob der Nutzer das Neuladen bestätigt hat
+let touchStartY = 0; // Startpunkt für Pull-to-Refresh-Geste
 
-// Überwache Scroll- oder Ziehbewegungen (für mobile Geräte)
-window.addEventListener('scroll', () => {
-    if (!userConfirmed && window.scrollY <= 0) { // Nur wenn am Seitenanfang
-        const modal = document.getElementById('refresh-confirmation-modal');
-        if (modal) {
-            modal.style.display = 'block'; // Modal anzeigen
-            document.body.style.overflow = 'hidden'; // Seite blockieren
-        }
+// --- Mobilgeräte: Pull-to-Refresh überwachen ---
+window.addEventListener('touchstart', (event) => {
+    if (window.scrollY === 0) { // Nur am Seitenanfang relevant
+        touchStartY = event.touches[0].clientY; // Startpunkt der Geste merken
     }
 });
 
-// Überwache Reload-Events (für Desktop-Browser)
+window.addEventListener('touchend', (event) => {
+    const touchEndY = event.changedTouches[0].clientY; // Endpunkt der Geste
+    if (touchStartY < touchEndY - 50 && window.scrollY === 0) { // Nur bei Ziehen nach unten
+        showModal(); // Modal anzeigen
+    }
+});
+
+// --- Desktop: Reload-Events überwachen ---
 window.addEventListener('beforeunload', (event) => {
     if (!userConfirmed) {
-        event.preventDefault(); // Standard verhindern
-        event.returnValue = ''; // Notwendig für moderne Browser
-        const modal = document.getElementById('refresh-confirmation-modal');
-        if (modal) {
-            modal.style.display = 'block'; // Modal anzeigen
-            document.body.style.overflow = 'hidden'; // Seite blockieren
-        }
-        return ''; // Ohne diesen Rückgabewert wird nichts ausgelöst
+        event.preventDefault(); // Standard-Reload verhindern
+        showModal(); // Modal anzeigen
+        return ''; // Kein Standarddialog des Browsers
     }
 });
 
-// Button im Modal: Neuladen bestätigen
+// --- Modalsteuerung ---
+function showModal() {
+    const modal = document.getElementById('refresh-confirmation-modal');
+    if (modal) {
+        modal.style.display = 'block'; // Modal sichtbar machen
+        document.body.style.overflow = 'hidden'; // Scrollen blockieren
+    }
+}
+
 document.getElementById('confirm-refresh-button').addEventListener('click', () => {
-    userConfirmed = true; // Nutzer hat zugestimmt
+    userConfirmed = true; // Nutzer hat Reload bestätigt
     document.body.style.overflow = ''; // Scrollen wieder erlauben
     location.reload(); // Seite neu laden
 });
 
-// Button im Modal: Abbrechen
 document.getElementById('cancel-refresh-button').addEventListener('click', () => {
     const modal = document.getElementById('refresh-confirmation-modal');
     if (modal) {
@@ -7910,6 +7916,7 @@ document.getElementById('cancel-refresh-button').addEventListener('click', () =>
         document.body.style.overflow = ''; // Scrollen wieder erlauben
     }
 });
+
 
 
 
