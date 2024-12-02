@@ -7860,14 +7860,6 @@
     event.returnValue = ''; // Notwendig, um die Warnung auszulösen
 });
 
-function setViewportHeight() {
-    const viewportHeight = window.innerHeight; // Höhe des sichtbaren Bereichs
-    document.documentElement.style.setProperty('--viewport-height', `${viewportHeight}px`);
-}
-
-// Beim Laden und bei Fensteränderung aufrufen
-setViewportHeight();
-window.addEventListener('resize', setViewportHeight);
 
 
 
