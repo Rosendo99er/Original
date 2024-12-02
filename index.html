@@ -4402,23 +4402,6 @@
   
   <body>
  
-    <div id="refresh-confirmation-modal" class="modal-standard-background" aria-modal="true">
-  
-      <div class="modal-standard-inner">
-  
-        <div class="modal-standard-content">
-          <p id="refresh-page" class="modal-standard-content p">Die Seite wird neu geladen und Ihre Eingaben inkl. der Chat-Historie werden gelöscht.</p>
-        </div>
-  
-        <div class="modal-standard-button-container">
-          <button id="cancel-refresh-button" class="modal-standard-button">Abbrechen</button>
-          <button id="confirm-refresh-button" class="modal-standard-button">OK</button>
-        </div>
-  
-      </div>
-  
-    </div>      
-
     <div id="delete-confirmation-modal" class="modal-standard-background" aria-modal="true">
   
       <div class="modal-standard-inner">
@@ -7866,59 +7849,10 @@
   }
   
   
-
-
-  let userConfirmed = false; // Status, ob der Nutzer das Neuladen bestätigt hat
-let touchStartY = 0; // Startpunkt für Pull-to-Refresh-Geste
-
-// --- Mobilgeräte: Pull-to-Refresh überwachen ---
-window.addEventListener('touchstart', (event) => {
-    if (window.scrollY === 0) { // Nur am Seitenanfang relevant
-        touchStartY = event.touches[0].clientY; // Startpunkt der Geste merken
-    }
+  window.addEventListener('beforeunload', (event) => {
+    event.preventDefault(); // Standardverhalten verhindern
+    event.returnValue = ''; // Notwendig, um die Warnung auszulösen
 });
-
-window.addEventListener('touchend', (event) => {
-    const touchEndY = event.changedTouches[0].clientY; // Endpunkt der Geste
-    if (touchStartY < touchEndY - 50 && window.scrollY === 0) { // Nur bei Ziehen nach unten
-        showModal(); // Modal anzeigen
-    }
-});
-
-// --- Desktop: Reload-Events überwachen ---
-window.addEventListener('beforeunload', (event) => {
-    if (!userConfirmed) {
-        event.preventDefault(); // Standard-Reload verhindern
-        showModal(); // Modal anzeigen
-        return ''; // Kein Standarddialog des Browsers
-    }
-});
-
-// --- Modalsteuerung ---
-function showModal() {
-    const modal = document.getElementById('refresh-confirmation-modal');
-    if (modal) {
-        modal.style.display = 'block'; // Modal sichtbar machen
-        document.body.style.overflow = 'hidden'; // Scrollen blockieren
-    }
-}
-
-document.getElementById('confirm-refresh-button').addEventListener('click', () => {
-    userConfirmed = true; // Nutzer hat Reload bestätigt
-    document.body.style.overflow = ''; // Scrollen wieder erlauben
-    location.reload(); // Seite neu laden
-});
-
-document.getElementById('cancel-refresh-button').addEventListener('click', () => {
-    const modal = document.getElementById('refresh-confirmation-modal');
-    if (modal) {
-        modal.style.display = 'none'; // Modal ausblenden
-        document.body.style.overflow = ''; // Scrollen wieder erlauben
-    }
-});
-
-
-
 
 
   
