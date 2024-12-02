@@ -7855,6 +7855,35 @@
 });
 
 
+// Variablen für die Geste
+let touchStartY = 0; // Startpunkt der Berührung
+let isPullingDown = false; // Status, ob Pull-to-Refresh erkannt wurde
+
+// Touchstart-Event: Geste beginnen
+window.addEventListener('touchstart', (event) => {
+    if (window.scrollY === 0) { // Nur, wenn die Seite am Anfang ist
+        touchStartY = event.touches[0].clientY; // Y-Position speichern
+        isPullingDown = true; // Pull-Geste erkannt
+    } else {
+        isPullingDown = false; // Kein Pull-to-Refresh
+    }
+});
+
+// Touchmove-Event: Geste überwachen
+window.addEventListener('touchmove', (event) => {
+    const touchCurrentY = event.touches[0].clientY; // Aktuelle Y-Position
+    if (isPullingDown && touchCurrentY > touchStartY) { // Ziehen nach unten
+        event.preventDefault(); // Standardverhalten (Pull-to-Refresh) blockieren
+        isPullingDown = false; // Nach Blockierung zurücksetzen
+    }
+});
+
+// Touchend-Event: Geste zurücksetzen
+window.addEventListener('touchend', () => {
+    isPullingDown = false; // Zurücksetzen, wenn die Berührung endet
+});
+
+
   
   
   //const passwort = prompt("Bitte geben Sie das Passwort ein:");
