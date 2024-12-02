@@ -7866,33 +7866,50 @@
   }
   
   
-let showModalOnRefresh = true; // Steuerung, ob das Modal angezeigt wird
 
-window.addEventListener('beforeunload', (event) => {
-    if (showModalOnRefresh) {
-        event.preventDefault(); // Standard verhindern
-        event.returnValue = ''; // Notwendig für moderne Browser
+
+let userConfirmed = false; // Status, ob der Nutzer das Neuladen bestätigt hat
+
+// Überwache Scroll- oder Ziehbewegungen (für mobile Geräte)
+window.addEventListener('scroll', () => {
+    if (!userConfirmed && window.scrollY <= 0) { // Nur wenn am Seitenanfang
         const modal = document.getElementById('refresh-confirmation-modal');
         if (modal) {
-            modal.style.display = 'block'; // Modal sichtbar machen
+            modal.style.display = 'block'; // Modal anzeigen
+            document.body.style.overflow = 'hidden'; // Seite blockieren
         }
     }
 });
 
-// Button im Modal, um die Seite wirklich neu zu laden
-document.getElementById('confirm-refresh-button').addEventListener('click', () => {
-    showModalOnRefresh = false; // Überspringe Modal bei tatsächlichem Reload
-    location.reload(); // Seite neuladen
+// Überwache Reload-Events (für Desktop-Browser)
+window.addEventListener('beforeunload', (event) => {
+    if (!userConfirmed) {
+        event.preventDefault(); // Standard verhindern
+        event.returnValue = ''; // Notwendig für moderne Browser
+        const modal = document.getElementById('refresh-confirmation-modal');
+        if (modal) {
+            modal.style.display = 'block'; // Modal anzeigen
+            document.body.style.overflow = 'hidden'; // Seite blockieren
+        }
+        return ''; // Ohne diesen Rückgabewert wird nichts ausgelöst
+    }
 });
 
-// Optional: Button zum Abbrechen, um Modal zu schließen
+// Button im Modal: Neuladen bestätigen
+document.getElementById('confirm-refresh-button').addEventListener('click', () => {
+    userConfirmed = true; // Nutzer hat zugestimmt
+    document.body.style.overflow = ''; // Scrollen wieder erlauben
+    location.reload(); // Seite neu laden
+});
+
+// Button im Modal: Abbrechen
 document.getElementById('cancel-refresh-button').addEventListener('click', () => {
     const modal = document.getElementById('refresh-confirmation-modal');
     if (modal) {
         modal.style.display = 'none'; // Modal ausblenden
+        document.body.style.overflow = ''; // Scrollen wieder erlauben
     }
 });
-
 
 
 
