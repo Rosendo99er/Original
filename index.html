@@ -670,7 +670,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    overscroll-behavior-y: none; /* Pull-to-Refresh verhindern */
     }
   
   
@@ -771,12 +770,11 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      height: var(--viewport-height);
+      min-height: 100vh;
       width: 100vw;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
-      overscroll-behavior-y: none; /* Pull-to-Refresh verhindern */
     }
   
   
@@ -1174,7 +1172,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    overscroll-behavior-y: none;
     }
   
   
@@ -1606,7 +1603,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    overscroll-behavior-y: none;
   }
   
   
@@ -1975,7 +1971,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    overscroll-behavior-y: none;
   }
   
   
@@ -2458,7 +2453,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;  
-    overscroll-behavior-y: none;
   }
   
   
@@ -4407,7 +4401,8 @@
   
   
   <body>
- 
+  
+    
     <div id="delete-confirmation-modal" class="modal-standard-background" aria-modal="true">
   
       <div class="modal-standard-inner">
@@ -5997,18 +5992,15 @@
               })
           });
   
-          console.log("Server response received", response);
+          console.log("Server response received");
   
           if (!response.ok) {
               const errorText = await response.text();
               throw new Error(`Fehler beim Abrufen der Antwort: ${errorText}`);
           }
-
-    const responseData = await response.json();
-    console.log("Parsed API response:", responseData); // Hier fügen wir die Ausgabe hinzu.      
-
+  
     console.log('Vor processIncomingData:', response);
-    await processIncomingData(responseData);
+    await processIncomingData(response);
     console.log('Nach processIncomingData');
           console.log("Finale Antwort empfangen.");
   
@@ -6051,12 +6043,11 @@
   
   let currentBotMessageElement = null; // Variable zum Speichern des aktuellen Bot-Nachrichten-Elements
   
-  async function processIncomingData(responseData) {
+  async function processIncomingData(response) {
       console.log('Received response:', response);
   
       // Empfange die gesamte Antwort als JSON
-      //const responseData = await response.json();
-      console.log('Received parsed response data:', responseData);
+      const responseData = await response.json();
   
       // Extrahiere den Inhalt der Antwort
       let fullMessage = responseData.choices[0].message.content;
@@ -7859,15 +7850,7 @@
   }
   
   
-  window.addEventListener('beforeunload', (event) => {
-    event.preventDefault(); // Standardverhalten verhindern
-    event.returnValue = ''; // Notwendig, um die Warnung auszulösen
-});
-
-
-
-
-
+  
   
   
   //const passwort = prompt("Bitte geben Sie das Passwort ein:");
