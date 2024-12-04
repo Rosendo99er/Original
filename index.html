@@ -6008,7 +6008,7 @@
     console.log("Parsed API response:", responseData); // Hier fügen wir die Ausgabe hinzu.      
 
     console.log('Vor processIncomingData:', response);
-    await processIncomingData(response);
+    await processIncomingData(responseData);
     console.log('Nach processIncomingData');
           console.log("Finale Antwort empfangen.");
   
@@ -6051,7 +6051,7 @@
   
   let currentBotMessageElement = null; // Variable zum Speichern des aktuellen Bot-Nachrichten-Elements
   
-  async function processIncomingData(response) {
+  async function processIncomingData(responseData) {
       console.log('Received response:', response);
   
       // Empfange die gesamte Antwort als JSON
