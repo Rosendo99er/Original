@@ -6055,7 +6055,8 @@
       console.log('Received response:', response);
   
       // Empfange die gesamte Antwort als JSON
-      const responseData = await response.json();
+      //const responseData = await response.json();
+      console.log('Received parsed response data:', responseData);
   
       // Extrahiere den Inhalt der Antwort
       let fullMessage = responseData.choices[0].message.content;
