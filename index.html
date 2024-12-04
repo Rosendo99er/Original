@@ -5997,13 +5997,16 @@
               })
           });
   
-          console.log("Server response received");
+          console.log("Server response received", response);
   
           if (!response.ok) {
               const errorText = await response.text();
               throw new Error(`Fehler beim Abrufen der Antwort: ${errorText}`);
           }
-  
+
+    const responseData = await response.json();
+    console.log("Parsed API response:", responseData); // Hier fügen wir die Ausgabe hinzu.      
+
     console.log('Vor processIncomingData:', response);
     await processIncomingData(response);
     console.log('Nach processIncomingData');
