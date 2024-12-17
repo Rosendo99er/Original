@@ -7871,16 +7871,24 @@
     const botMessages = document.querySelectorAll(".bot-message");
     const lastBotMessage = document.querySelector(".bot-message:last-child");
 
-    // Eingabefeld finden
+    // Zu sperrende Felder finden
     const inputField = document.getElementById("chatbot-input");
+    const inputIcon = document.querySelector("#input-right button");
+    const dropdownField = document.getElementById("theme");
+
+
 
     if (inputField) {
       if (lastBotMessage && lastBotMessage.querySelector(".suggested-link")) {
-        // Sperre das Eingabefeld, wenn suggested-link vorhanden ist
+        // Sperre das Eingabefeld, Icon und Dropdown, wenn suggested-link vorhanden ist
         inputField.disabled = true;
+        if (inputIcon) inputIcon.disabled = true;
+        if (dropdownField) dropdownField.disabled = true;
       } else {
-        // Entsperre das Eingabefeld, wenn kein suggested-link vorhanden ist
+        // Entsperre das Eingabefeld, Icon und Dropdown, wenn kein suggested-link vorhanden ist
         inputField.disabled = false;
+        if (inputIcon) inputIcon.disabled = false;
+        if (dropdownField) dropdownField.disabled = false;
       }
     }
   }
