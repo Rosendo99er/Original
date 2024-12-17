@@ -7869,7 +7869,7 @@
   // Funktion, um das Eingabefeld zu sperren oder zu entsperren
   function checkForSuggestedLink() {
     const botMessages = document.querySelectorAll(".bot-message");
-    const lastBotMessage = botMessages[botMessages.length - 1];
+    const lastBotMessage = document.querySelector(".bot-message:last-child");
 
     // Eingabefeld finden
     const inputField = document.getElementById("chatbot-input");
