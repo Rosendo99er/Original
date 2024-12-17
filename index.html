@@ -7866,31 +7866,37 @@
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Funktion, um das Eingabefeld zu sperren, falls ein suggested-link vorhanden ist
-    function checkForSuggestedLink() {
-      const botMessages = document.querySelectorAll(".bot-message");
-      const lastBotMessage = botMessages[botMessages.length - 1];
-      
+  // Funktion, um das Eingabefeld zu sperren oder zu entsperren
+  function checkForSuggestedLink() {
+    const botMessages = document.querySelectorAll(".bot-message");
+    const lastBotMessage = botMessages[botMessages.length - 1];
+
+    // Eingabefeld finden
+    const inputField = document.getElementById("chatbot-input");
+
+    if (inputField) {
       if (lastBotMessage && lastBotMessage.querySelector(".suggested-link")) {
-        // Sperre das Eingabefeld
-        const inputField = document.getElementById("chatbot-input");
-        if (inputField) {
-          inputField.disabled = true;
-        }
+        // Sperre das Eingabefeld, wenn suggested-link vorhanden ist
+        inputField.disabled = true;
+      } else {
+        // Entsperre das Eingabefeld, wenn kein suggested-link vorhanden ist
+        inputField.disabled = false;
       }
     }
+  }
 
-    // Beobachte Änderungen im DOM (für neue bot-messages)
-    const observer = new MutationObserver(checkForSuggestedLink);
-    const targetNode = document.getElementById("chatbot-container");
-  
-    if (targetNode) {
-      observer.observe(targetNode, { childList: true, subtree: true });
-    }
+  // Beobachte Änderungen im DOM (für neue bot-messages)
+  const observer = new MutationObserver(checkForSuggestedLink);
+  const targetNode = document.getElementById("chatbot-container");
 
-    // Führe die Überprüfung beim Laden der Seite aus
-    checkForSuggestedLink();
-  });
+  if (targetNode) {
+    observer.observe(targetNode, { childList: true, subtree: true });
+  }
+
+  // Führe die Überprüfung initial aus
+  checkForSuggestedLink();
+});
+
 
 
 
