@@ -7874,8 +7874,13 @@
     // Zu sperrende Felder finden
     const inputField = document.getElementById("chatbot-input");
     const inputIcon = document.getElementById("input-right");
+    const inputSVG = document.querySelector(".icon hover-scale");
     const dropdownField = document.getElementById("chatbot-themes");
     const dropdownOption = document.getElementById("theme");
+
+
+
+icon hover-scale
 
 
 
@@ -7884,12 +7889,14 @@
         // Sperre das Eingabefeld, Icon und Dropdown, wenn suggested-link vorhanden ist
         inputField.disabled = true;
         if (inputIcon) inputIcon.disabled = true;
+        if (inputSVG) inputSVG.disabled = true;
         if (dropdownField) dropdownField.disabled = true;
         if (dropdownOption) dropdownOption.disabled = true;
       } else {
         // Entsperre das Eingabefeld, Icon und Dropdown, wenn kein suggested-link vorhanden ist
         inputField.disabled = false;
         if (inputIcon) inputIcon.disabled = false;
+        if (inputSVG) inputSVG.disabled = false;
         if (dropdownField) dropdownField.disabled = false;
         if (dropdownOption) dropdownOption.disabled = false;
       }
