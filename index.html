@@ -4399,7 +4399,14 @@
       background-color: var(--secondary-button-color);
   }
   
-  
+
+  .bot-table {
+    font-family: var(--company-font-family);
+    color: var(--website-standard-font-color-dark);
+    font-size: var(--company-font-size-text);
+  }
+
+
   
   </style>
   </head>
@@ -7906,6 +7913,11 @@
 
   // Führe die Überprüfung initial aus
   checkForSuggestedLink();
+});
+
+
+document.querySelectorAll('table').forEach((table) => {
+    table.classList.add('bot-table');
 });
 
 
