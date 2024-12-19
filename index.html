@@ -7966,7 +7966,7 @@
 
 
 
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', async function(event) {
       const target = event.target;
   
       if (target.classList.contains('send-email-link') && target.id === 'FmpRateRP') {
@@ -7979,7 +7979,7 @@
           inputField.value = message; // Nachricht ins Feld einfügen
           saveHiddenCodeToHistory(hiddenCode)
           deleteLink2();
-          openConfirmationModal();
+          await openConfirmationModal();
           sendMessage(); // Vorhandene Sende-Funktion aufrufen
       }
       if (target.classList.contains('send-email-link') && target.id !== 'FmpRateRP') {
