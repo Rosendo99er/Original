@@ -7167,8 +7167,10 @@
           let receivedText = ''; // Variable, um den gesamten Text zu sammeln
   
           // Überprüfen, ob Daten vorhanden sind und extrahiere den Text
-          if (responseData && responseData.choices && responseData.choices[0].message.content) {
-              receivedText = responseData.choices[0].message.content;  // Empfangenen Text sammeln
+          // if (responseData && responseData.choices && responseData.choices[0].message.content) {
+          if (responseData && responseData.messages && responseData.messages.length > 0) {
+              receivedText = responseData.messages.map(m => m.content).join('\n\n');
+              // receivedText = responseData.choices[0].message.content;  // Empfangenen Text sammeln
           }
   
           // Entferne \n und spezifische Zeichenfolgen aus dem gesamten Text
