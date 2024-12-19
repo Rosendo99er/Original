@@ -4145,7 +4145,47 @@
     padding-left: 0px;
   }
   
+
+  .modal-contact-form-name {
+    font-family: var(--company-font-family);
+    font-size: var(--font-size-text);
+    color: var(--primary-font-color);
+    font-weight: normal;
+    padding: 10px 10px 10px 30px;
+    border: 2px solid var(--form-and-field-border-color);
+    border-radius: var(--primary-border-radius);
+    background-color: var(--form-and-field-background-color);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    max-height: calc(1.5em * 6 + 20px);
+  }
   
+  .modal-contact-form-name:focus {
+    background-color: var(--form-and-field-background-color-focus);
+    border: 2px solid var(--form-and-field-border-color-focus) !important;
+    border-radius: var(--primary-border-radius) !important;    
+    z-index: 50;
+    outline: none; 
+  }
+  
+  .modal-contact-form-name::placeholder {
+    color: var(--secondary-font-color);
+    font-size: var(--font-size-text);
+    font-style: italic;
+    font-weight: normal;
+    padding-left: 0px;
+  }
+
+
+
   
   .icon {
       width: 40px;   
@@ -4598,7 +4638,7 @@
             <span>Rechnungssteller: </span><span id="modalRechnungssteller"></span><br>
             <span>Rechnungsnummer: </span><span id="modalRechnungsnummer"></span></p><br>
           <p><strong>Ihr Name:</strong><br>
-          <input id="modalName" class="modal-contact-form-email" name="modalName" placeholder="Ihr Name" maxlength="500" autocomplete="name" required /><br>
+          <input id="modalName" class="modal-contact-form-name" name="modalName" placeholder="Ihr Name" maxlength="500" autocomplete="name" required /><br>
           <p><strong>Ihre E-Mail-Adresse:</strong><br>
           <input type="email" class="modal-contact-form-email" name="modalEmail" placeholder="Ihre E-Mail-Adresse" maxlength="500" autocomplete="email" required /><br>
           <span id="modal-email-error" style="display: none; color: red; font-size: 0.9em;">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span></p><br>
