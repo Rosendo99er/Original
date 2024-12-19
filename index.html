@@ -7913,18 +7913,13 @@
           sendMessage(); // Vorhandene Sende-Funktion aufrufen
       }
   });
-  
+
+
   // Neue Funktion für das Speichern der ID
   function saveHiddenCodeToHistory(code) {
       conversationHistory.push({ role: 'user', content: code });
   }
   
-  
-  window.addEventListener('beforeunload', (event) => {
-    event.preventDefault(); // Standardverhalten verhindern
-    event.returnValue = ''; // Notwendig, um die Warnung auszulösen
-});
-
 
   document.addEventListener("DOMContentLoaded", function () {
   // Funktion, um das Eingabefeld zu sperren oder zu entsperren
@@ -7971,59 +7966,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   document.addEventListener('click', function(event) {
       const target = event.target;
   
       if (target.classList.contains('send-email-link')) {
-          event.preventDefault(); // Standard-Link-Verhalten verhindern
-          const message = target.textContent.trim(); // Text des Links lesen
-          const hiddenCode = target.id;
-  
-          // Nachricht in das Eingabefeld einfügen und senden
-          const inputField = document.getElementById('chatbot-input');
-          inputField.value = message; // Nachricht ins Feld einfügen
-          saveHiddenCodeToHistory(hiddenCode)
           deleteLink2();
-          sendMessage(); // Vorhandene Sende-Funktion aufrufen
       }
   });
   
-  // Neue Funktion für das Speichern der ID
-  function saveHiddenCodeToHistory(code) {
-      conversationHistory.push({ role: 'user', content: code });
-  }
-  
-  
-  window.addEventListener('beforeunload', (event) => {
-    event.preventDefault(); // Standardverhalten verhindern
-    event.returnValue = ''; // Notwendig, um die Warnung auszulösen
-});
+ 
 
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -8100,6 +8051,15 @@
 document.querySelectorAll('table').forEach((table) => {
     table.classList.add('bot-table');
 });
+
+
+  
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault(); // Standardverhalten verhindern
+    event.returnValue = ''; // Notwendig, um die Warnung auszulösen
+});
+
+
 
 
   
