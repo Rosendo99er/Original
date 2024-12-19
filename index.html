@@ -5987,8 +5987,9 @@
       }
   
       // ChatbotHistory aktualisieren für Absätze
-      const formattedUserMessage = "\n\nBenutzernachricht:\n\n" + userMessage;
-      chatbotHistory.push({ role: 'user', content: formattedUserMessage });
+      // const formattedUserMessage = "\n\nBenutzernachricht:\n\n" + userMessage;
+      // chatbotHistory.push({ role: 'user', content: formattedUserMessage });
+      chatbotHistory.push({ role: 'user', content: userMessage });
   }
   
   function saveBotMessage(botMessage) {
@@ -6001,8 +6002,9 @@
       conversationHistory.push({ role: 'assistant', content: botMessage });
   
       // ChatbotHistory aktualisieren mit HTML <br> Tags für Absätze
-      const formattedBotMessage = "\n\nAntwort von Chati:\n\n" + botMessage;
-      chatbotHistory.push({ role: 'assistant', content: formattedBotMessage });
+      // const formattedBotMessage = "\n\nAntwort von Chati:\n\n" + botMessage;
+      // chatbotHistory.push({ role: 'assistant', content: formattedBotMessage });
+      chatbotHistory.push({ role: 'assistant', content: botMessage });
   }
   
   
