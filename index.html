@@ -4400,11 +4400,58 @@
   }
   
 
+
+  .send-email-link {
+      display: inline-block;
+      font-family: var(--company-font-family);
+      font-size: var(--font-size-button);
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 1px solid var(--primary-background-color);
+      border-radius: var(--primary-border-radius);
+      background-color: var(--primary-button-color);
+      color: var(--tertiary-font-color);
+      cursor: pointer;
+      width: auto;
+      text-align: center;
+  }
+  
+  .send-email-link:hover {
+      background-color: var(--secondary-button-color);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
   .bot-table, .bot-table th, .bot-table td {
     font-family: var(--company-font-family) !important;
     color: var(--website-standard-font-color-dark) !important;
     font-size: var(--company-font-size-text) !important;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
@@ -6102,7 +6149,14 @@
       });
     }
   
-  
+    function deleteLink() {
+    const lastBotMessage2 = document.querySelectorAll('.bot-message:last-child .send-email-link');
+      lastBotMessage2.forEach(link => {
+        const label = link.textContent;
+        link.replaceWith(document.createTextNode(label));
+      });
+    }
+
   
   
   
@@ -7916,11 +7970,21 @@
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 document.querySelectorAll('table').forEach((table) => {
     table.classList.add('bot-table');
 });
-
-
 
 
   
